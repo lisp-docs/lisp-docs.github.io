@@ -23,6 +23,7 @@ const config = {
   organizationName: 'lisp-docs', // Usually your GitHub org/user name.
   projectName: 'lisp-docs.github.io', // Usually your repo name.
   trailingSlash: false,
+  deploymentBranch: "main",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
