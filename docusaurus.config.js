@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Lisp Docs',
+  tagline: 'The (Un)Official LISP Documentation ',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
