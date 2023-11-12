@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lisp-docs.github.io/blog</id>
+    <title>Lisp Docs Blog</title>
+    <updated>2023-11-12T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lisp-docs.github.io/blog"/>
+    <subtitle>Lisp Docs Blog</subtitle>
+    <icon>https://lisp-docs.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Mission]]></title>
+        <id>https://lisp-docs.github.io/blog/mission</id>
+        <link href="https://lisp-docs.github.io/blog/mission"/>
+        <updated>2023-11-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The mission of Lisp Docs and this website in particular is to provide LISP Documentation.]]></summary>
+        <content type="html"><![CDATA[<p>The mission of Lisp Docs and this website in particular is to provide LISP Documentation.</p>
+<p>The Docs in this Website are aimed to be a User Guide.</p>
+<p>This website <a href="https://lisp-docs.github.io/cl-language-reference/" target="_blank" rel="noopener noreferrer">CL LISP Reference</a> is meant to be the reference.</p>
+<p>We will hopefully soon come up with a tutorials website and more!</p>
+<p>We aim to make this website as comprehensive as websites for other languages using <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a> as an example...</p>
+<div class="language-common-lisp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-common-lisp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">(format T "Hello World!)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
+        <author>
+            <name>Daniel N</name>
+            <uri>https://github.com/lisp-docs</uri>
+        </author>
+        <category label="mission" term="mission"/>
+        <category label="beginning" term="beginning"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TODO]]></title>
+        <id>https://lisp-docs.github.io/blog/TODO</id>
+        <link href="https://lisp-docs.github.io/blog/TODO"/>
+        <updated>2023-11-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TODO]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="todo">TODO<a href="https://lisp-docs.github.io/blog/TODO#todo" class="hash-link" aria-label="Direct link to TODO" title="Direct link to TODO">​</a></h2>
+<ul>
+<li>Find People to Help Us write the content of this website!</li>
+<li>Add a Getting Started in Common Lisp Page</li>
+<li>Add Links to the cookbook, HyperSpec, and Common Lisp, The Language 2<!-- -->
+<ul>
+<li>However, we eventually hope to completely replace the HyperSpec and CLTL2</li>
+</ul>
+</li>
+<li>Add User Guide section and article stubs</li>
+<li>Think about what to add</li>
+</ul>]]></content>
+        <author>
+            <name>Daniel N</name>
+            <uri>https://github.com/lisp-docs</uri>
+        </author>
+        <category label="todo" term="todo"/>
+        <category label="beginning" term="beginning"/>
+    </entry>
+</feed>
