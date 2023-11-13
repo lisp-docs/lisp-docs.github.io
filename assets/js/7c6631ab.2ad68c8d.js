@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[387],{9075:s=>{s.exports=JSON.parse('{"label":"mission","permalink":"/blog/tags/mission","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
