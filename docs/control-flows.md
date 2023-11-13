@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # More Control Flow Tools
 
-As well as the while statement just introduced, Python uses a few more that we will encounter in this chapter.
+As well as the while statement just introduced, Common Lisp uses a few more that we will encounter in this chapter.
 
 !if Statements
 --------------
@@ -34,7 +34,7 @@ If you're comparing the same value to several constants, or checking for specifi
 !for Statements
 ---------------
 
-The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python's !for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):
+The for statement in Common Lisp differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Common Lisp's !for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):
 ```lisp
     >>> # Measure some strings:
     ... words = ['cat', 'window', 'defenestrate']
@@ -411,7 +411,7 @@ It is simple to write a function that returns a list of the numbers of the Fibon
     [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 ```    
 
-This example, as usual, demonstrates some new Python features:
+This example, as usual, demonstrates some new Common Lisp features:
 ```lisp
 -   The return statement returns with a value from a function. !return without an expression argument returns `None`. Falling
  ```off the end of a function also returns `None`.
@@ -570,7 +570,7 @@ Note that the order in which the keyword arguments are printed is guaranteed to 
 
 ### Special parameters
 
-By default, arguments may be passed to a Python function either by position or explicitly by keyword. For readability and performance, it makes sense to restrict the way arguments can be passed so that a developer need only look at the function definition to determine if items are passed by position, by position or keyword, or by keyword.
+By default, arguments may be passed to a Common Lisp function either by position or explicitly by keyword. For readability and performance, it makes sense to restrict the way arguments can be passed so that a developer need only look at the function definition to determine if items are passed by position, by position or keyword, or by keyword.
 
 A function definition may look like:
 
@@ -786,7 +786,7 @@ The first line should always be a short, concise summary of the object's purpose
 
 If there are more lines in the documentation string, the second line should be blank, visually separating the summary from the rest of the description. The following lines should be one or more paragraphs describing the object's calling conventions, its side effects, etc.
 
-The Python parser does not strip indentation from multi-line string literals in Python, so tools that process documentation have to strip indentation if desired. This is done using the following convention. The first non-blank line *after* the first line of the string determines the amount of indentation for the entire documentation string. (We can't use the first line since it is generally adjacent to the string's opening quotes so its indentation is not apparent in the string literal.) Whitespace "equivalent" to this indentation is then stripped from the start of all lines of the string. Lines that are indented less should not occur, but if they occur all their leading whitespace should be stripped. Equivalence of whitespace should be tested after expansion of tabs (to 8 spaces, normally).
+The Common Lisp parser does not strip indentation from multi-line string literals in Common Lisp, so tools that process documentation have to strip indentation if desired. This is done using the following convention. The first non-blank line *after* the first line of the string determines the amount of indentation for the entire documentation string. (We can't use the first line since it is generally adjacent to the string's opening quotes so its indentation is not apparent in the string literal.) Whitespace "equivalent" to this indentation is then stripped from the start of all lines of the string. Lines that are indented less should not occur, but if they occur all their leading whitespace should be stripped. Equivalence of whitespace should be tested after expansion of tabs (to 8 spaces, normally).
 
 Here is an example of a multi-line docstring:
 ```lisp
@@ -824,9 +824,9 @@ Annotations <function annotation> are stored in the !__annotations__ attribute o
 Intermezzo: Coding Style
 ------------------------
 
-Now that you are about to write longer, more complex pieces of Python, it is a good time to talk about *coding style*. Most languages can be written (or more concise, *formatted*) in different styles; some are more readable than others. Making it easy for others to read your code is always a good idea, and adopting a nice coding style helps tremendously for that.
+Now that you are about to write longer, more complex pieces of Common Lisp, it is a good time to talk about *coding style*. Most languages can be written (or more concise, *formatted*) in different styles; some are more readable than others. Making it easy for others to read your code is always a good idea, and adopting a nice coding style helps tremendously for that.
 
-For Python, 8 has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Python developer should read it at some point; here are the most important points extracted for you:
+For Common Lisp, 8 has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Common Lisp developer should read it at some point; here are the most important points extracted for you:
 ```lisp
 -   Use 4-space indentation, and no tabs.
 ```
@@ -848,7 +848,7 @@ For Python, 8 has emerged as the style guide that most projects adhere to; it pr
 -   Use spaces around operators and after commas, but not directly inside bracketing constructs: `a = f(1, 2) + g(3, 4)`.
 -   Name your classes and functions consistently; the convention is to use `UpperCamelCase` for classes and
  ````lowercase_with_underscores` for functions and methods. Always use `self` as the name for the first method argument (see tut-firstclasses for more on classes and methods).
--   Don't use fancy encodings if your code is meant to be used in international environments. Python's default, UTF-8, or even plain ASCII work best in any case.
+-   Don't use fancy encodings if your code is meant to be used in international environments. Common Lisp's default, UTF-8, or even plain ASCII work best in any case.
 -   Likewise, don't use non-ASCII characters in identifiers if there is only the slightest chance people speaking a different
  ```language will read or maintain the code.
 

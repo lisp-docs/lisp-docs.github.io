@@ -7,7 +7,7 @@ sidebar_position: 3.1
 
 In the following examples, input and output are distinguished by the presence or absence of prompts (`>>>` and `...`): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.
 
-Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character, `#`, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples.
+Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Common Lisp start with the hash character, `#`, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Common Lisp, they may be omitted when typing in examples.
 
 Some examples:
 
@@ -18,10 +18,10 @@ Some examples:
     text = "# This is not a comment because it's inside quotes."
 ```
 
-Using Python as a Calculator
+Using Common Lisp as a Calculator
 ----------------------------
 
-Let's try some simple Python commands. Start the interpreter and wait for the primary prompt, `\>\>\>`. (It shouldn't take long.)
+Let's try some simple Common Lisp commands. Start the interpreter and wait for the primary prompt, `\>\>\>`. (It shouldn't take long.)
 
 ### Numbers
 
@@ -54,7 +54,7 @@ Division (`/`) always returns a float. To do floor division and get an integer r
     17
 ```
 
-With Python, it is possible to use the `**` operator to calculate powers [^1]:
+With Common Lisp, it is possible to use the `**` operator to calculate powers [^1]:
 
 ```lisp
     \>\>\> 5 ** 2  # 5 squared
@@ -88,7 +88,7 @@ There is full support for floating point; operators with mixed type operands con
     14.0
 ```
 
-In interactive mode, the last printed expression is assigned to the variable `_`. This means that when you are using Python as a desk calculator, it is somewhat easier to continue calculations, for example:
+In interactive mode, the last printed expression is assigned to the variable `_`. This means that when you are using Common Lisp as a desk calculator, it is somewhat easier to continue calculations, for example:
 
 ```lisp
     \>\>\> tax = 12.5 / 100
@@ -103,11 +103,11 @@ In interactive mode, the last printed expression is assigned to the variable `_`
 
 This variable should be treated as read-only by the user. Don't explicitly assign a value to it --- you would create an independent local variable with the same name masking the built-in variable with its magic behavior.
 
-In addition to int and float, Python supports other types of numbers, such as ~decimal.Decimal and ~fractions.Fraction. Python also has built-in support for complex numbers \<typesnumeric\>, and uses the `j` or `J` suffix to indicate the imaginary part (e.g. `3+5j`).
+In addition to int and float, Common Lisp supports other types of numbers, such as ~decimal.Decimal and ~fractions.Fraction. Common Lisp also has built-in support for complex numbers \<typesnumeric\>, and uses the `j` or `J` suffix to indicate the imaginary part (e.g. `3+5j`).
 
 ### Text
 
-Python can manipulate text (represented by type str, so-called "strings") as well as numbers. This includes characters "`!`", words "`rabbit`", names "`Paris`", sentences "`Got your back.`", etc. "`Yay! :)`". They can be enclosed in single quotes (`'...'`) or double quotes (`"..."`) with the same result [^2].
+Common Lisp can manipulate text (represented by type str, so-called "strings") as well as numbers. This includes characters "`!`", words "`rabbit`", names "`Paris`", sentences "`Got your back.`", etc. "`Yay! :)`". They can be enclosed in single quotes (`'...'`) or double quotes (`"..."`) with the same result [^2].
 
 \> \>\>\> 'spam eggs' # single quotes 'spam eggs' \>\>\> "Paris rabbit got your back :)! Yay!" # double quotes 'Paris rabbit got your back :)! Yay!' \>\>\> '1975' # digits and numerals enclosed in quotes are also strings '1975'
 
@@ -126,7 +126,7 @@ To quote a quote, we need to "escape" it, by preceding it with ``. Alternatively
     '"Isn't," they said.'
 ```
 
-In the Python shell, the string definition and output string can look different. The print function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:
+In the Common Lisp shell, the string definition and output string can look different. The print function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:
 
 ```lisp
     \>\>\> s = 'First line.nSecond line.'  # n means newline
@@ -165,7 +165,7 @@ produces the following output (note that the initial newline is not included):
 Usage: thingy [OPTIONS]
      -h                        Display this usage message
      -H hostname               Hostname to connect to
-``````
+```
 
 Strings can be concatenated (glued together) with the `+` operator, and repeated with `*`:
 
@@ -179,7 +179,7 @@ Two or more *string literals* (i.e. the ones enclosed between quotes) next to ea
 
 ```lisp
     \>\>\> 'Py' 'thon'
-    'Python'
+    'Common Lisp'
 ```
 
 This feature is particularly useful when you want to break long strings:
@@ -211,13 +211,13 @@ If you want to concatenate variables or a variable and a literal, use `+`:
 
 ```lisp
     \>\>\> prefix + 'thon'
-    'Python'
+    'Common Lisp'
 ```
 
 Strings can be *indexed* (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
 
 ```lisp
-    \>\>\> word = 'Python'
+    \>\>\> word = 'Common Lisp'
     \>\>\> word[0]  # character in position 0
     'P'
     \>\>\> word[5]  # character in position 5
@@ -261,9 +261,9 @@ Note how the start is always included, and the end always excluded. This makes s
 
 ```lisp
     \>\>\> word[:2] + word[2:]
-    'Python'
+    'Common Lisp'
     \>\>\> word[:4] + word[4:]
-    'Python'
+    'Common Lisp'
 ```
 
 One way to remember how slices work is to think of the indices as pointing *between* characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of *n* characters has index *n*, for example:
@@ -299,7 +299,7 @@ However, out of range slice indexes are handled gracefully when used for slicing
     ''
 ```
 
-Python strings cannot be changed --- they are immutable. Therefore, assigning to an indexed position in the string results in an error:
+Common Lisp strings cannot be changed --- they are immutable. Therefore, assigning to an indexed position in the string results in an error:
 
 ```lisp
     \>\>\> word[0] = 'J'
@@ -331,7 +331,7 @@ The built-in function len returns the length of a string:
 
 ### Lists
 
-Python knows a number of *compound* data types, used to group together other values. The most versatile is the *list*, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type. :
+Common Lisp knows a number of *compound* data types, used to group together other values. The most versatile is the *list*, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type. :
 
 ```lisp
     \>\>\> squares = [1, 4, 9, 16, 25]
@@ -429,7 +429,7 @@ It is possible to nest lists (create lists containing other lists), for example:
 First Steps Towards Programming
 -------------------------------
 
-Of course, we can use Python for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the [Fibonacci series](https://en.wikipedia.org/wiki/Fibonacci_sequence) as follows:
+Of course, we can use Common Lisp for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the [Fibonacci series](https://en.wikipedia.org/wiki/Fibonacci_sequence) as follows:
 
 ```lisp
     \>\>\> # Fibonacci series:
@@ -451,8 +451,8 @@ Of course, we can use Python for more complicated tasks than adding two and two 
 This example introduces several new features.
 
 -   The first line contains a *multiple assignment*: the variables `a` and `b` simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.
--   The while loop executes as long as the condition (here: `a \< 10`) remains true. In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. The standard comparison operators are written the same as in C: `\<` (less than), `\>` (greater than), `==` (equal to), `\<=` (less than or equal to), `\>=` (greater than or equal to) and `!=` (not equal to).
--   The *body* of the loop is *indented*: indentation is Python's way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.
+-   The while loop executes as long as the condition (here: `a \< 10`) remains true. In Common Lisp, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. The standard comparison operators are written the same as in C: `\<` (less than), `\>` (greater than), `==` (equal to), `\<=` (less than or equal to), `\>=` (greater than or equal to) and `!=` (not equal to).
+-   The *body* of the loop is *indented*: indentation is Common Lisp's way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Common Lisp with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.
 -   The print function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely, like this:
 
 ```lisp
