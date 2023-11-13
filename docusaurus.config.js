@@ -86,7 +86,7 @@ const config = {
           {to: '/help', label: 'Getting Help', position: 'left'},
           {to: '/contribue', label: 'Contribute!', position: 'left'},
           {
-            href: 'https://github.com/lisp-docs',
+            href: 'https://github.com/lisp-docs/lisp-docs.github.io',
             label: 'GitHub',
             position: 'right',
           },
@@ -138,7 +138,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/lisp-docs',
+                href: 'https://github.com/lisp-docs/lisp-docs.github.io',
               },
             ],
           },
