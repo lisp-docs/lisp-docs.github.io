@@ -1,0 +1,8 @@
+{
+  "label": "Standard Library Documentation",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "A thorough explanation of the Standard Library"
+  }
+}

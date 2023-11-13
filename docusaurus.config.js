@@ -81,6 +81,9 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/about', label: 'About', position: 'left'},
+          {to: '/getting-started', label: 'Getting Started', position: 'left'},
+          {to: '/faq', label: 'FAQ', position: 'left'},
+          {to: '/contribue', label: 'Contribute!', position: 'left'},
           {
             href: 'https://github.com/lisp-docs',
             label: 'GitHub',
