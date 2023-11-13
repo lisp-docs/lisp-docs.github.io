@@ -12,9 +12,9 @@ As well as the while statement just introduced, Common Lisp uses a few more that
 Perhaps the most well-known statement type is the if statement. For example:
 
 ```lisp
-    >>> x = int(input("Please enter an integer: "))
+    \>\>\> x = int(input("Please enter an integer: "))
     Please enter an integer: 42
-    >>> if x < 0:
+    \>\>\> if x \< 0:
     ...     x = 0
     ...     print('Negative changed to zero')
     ... elif x == 0:
@@ -36,9 +36,9 @@ If you're comparing the same value to several constants, or checking for specifi
 
 The for statement in Common Lisp differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Common Lisp's !for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):
 ```lisp
-    >>> # Measure some strings:
+    \>\>\> # Measure some strings:
     ... words = ['cat', 'window', 'defenestrate']
-    >>> for w in words:
+    \>\>\> for w in words:
     ...     print(w, len(w))
     ...
     cat 3
@@ -70,7 +70,7 @@ The range Function
 
 If you do need to iterate over a sequence of numbers, the built-in function range comes in handy. It generates arithmetic progressions:
 ```lisp
-    >>> for i in range(5):
+    \>\>\> for i in range(5):
     ...     print(i)
     ...
     0
@@ -82,22 +82,22 @@ If you do need to iterate over a sequence of numbers, the built-in function rang
 
 The given end point is never part of the generated sequence; `range(10)` generates 10 values, the legal indices for items of a sequence of length 10. It is possible to let the range start at another number, or to specify a different increment (even negative; sometimes this is called the 'step'):
 ```lisp
-    >>> list(range(5, 10))
+    \>\>\> list(range(5, 10))
     [5, 6, 7, 8, 9]
 ```    
 ```lisp
-    >>> list(range(0, 10, 3))
+    \>\>\> list(range(0, 10, 3))
     [0, 3, 6, 9]
 ```    
 ```lisp
-    >>> list(range(-10, -100, -30))
+    \>\>\> list(range(-10, -100, -30))
     [-10, -40, -70]
 ```    
 
 To iterate over the indices of a sequence, you can combine range and len as follows:
 ```lisp
-    >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
-    >>> for i in range(len(a)):
+    \>\>\> a = ['Mary', 'had', 'a', 'little', 'lamb']
+    \>\>\> for i in range(len(a)):
     ...     print(i, a[i])
     ...
     0 Mary
@@ -111,7 +111,7 @@ In most such cases, however, it is convenient to use the enumerate function, see
 
 A strange thing happens if you just print a range:
 ```lisp
-    >>> range(10)
+    \>\>\> range(10)
     range(0, 10)
 ```    
 
@@ -119,7 +119,7 @@ In many ways the object returned by range behaves as if it is a list, but in fac
 
 We say such an object is iterable, that is, suitable as a target for functions and constructs that expect something from which they can obtain successive items until the supply is exhausted. We have seen that the for statement is such a construct, while an example of a function that takes an iterable is sum:
 ```lisp
-    >>> sum(range(4))  # 0 + 1 + 2 + 3
+    \>\>\> sum(range(4))  # 0 + 1 + 2 + 3
     6
 ```    
 
@@ -140,7 +140,7 @@ In either kind of loop, the !else clause is **not** executed if the loop was ter
 
 This is exemplified in the following !for loop, which searches for prime numbers:
 ```lisp
-    >>> for n in range(2, 10):
+    \>\>\> for n in range(2, 10):
     ...     for x in range(2, n):
     ...         if n % x == 0:
     ...             print(n, 'equals', x, '*', n//x)
@@ -165,7 +165,7 @@ When used with a loop, the `else` clause has more in common with the `else` clau
 
 The continue statement, also borrowed from C, continues with the next iteration of the loop:
 ```lisp
-    >>> for num in range(2, 10):
+    \>\>\> for num in range(2, 10):
     ...     if num % 2 == 0:
     ...         print("Found an even number", num)
     ...         continue
@@ -186,21 +186,21 @@ The continue statement, also borrowed from C, continues with the next iteration 
 
 The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action. For example:
 ```lisp
-    >>> while True:
+    \>\>\> while True:
     ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
     ...
 ```    
 
 This is commonly used for creating minimal classes:
 ```lisp
-    >>> class MyEmptyClass:
+    \>\>\> class MyEmptyClass:
     ...     pass
     ...
 ```    
 
 Another place pass can be used is as a place-holder for a function or conditional body when you are working on new code, allowing you to keep thinking at a more abstract level. The !pass is silently ignored:
 ```lisp
-    >>> def initlog(*args):
+    \>\>\> def initlog(*args):
     ...     pass   # Remember to implement this!
     ...
 ```    
@@ -358,15 +358,15 @@ Defining Functions
 
 We can create a function that writes the Fibonacci series to an arbitrary boundary:
 ```lisp
-    >>> def fib(n):    # write Fibonacci series up to n
+    \>\>\> def fib(n):    # write Fibonacci series up to n
     ...     """Print a Fibonacci series up to n."""
     ...     a, b = 0, 1
-    ...     while a < n:
+    ...     while a \< n:
     ...         print(a, end=' ')
     ...         a, b = b, a+b
     ...     print()
     ...
-    >>> # Now call the function we just defined:
+    \>\>\> # Now call the function we just defined:
     ... fib(2000)
     0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
 ```    
@@ -381,33 +381,33 @@ The actual parameters (arguments) to a function call are introduced in the local
 
 A function definition associates the function name with the function object in the current symbol table. The interpreter recognizes the object pointed to by that name as a user-defined function. Other names can also point to that same function object and can also be used to access the function:
 ```lisp
-    >>> fib
-    <function fib at 10042ed0>
-    >>> f = fib
-    >>> f(100)
+    \>\>\> fib
+    \<function fib at 10042ed0\>
+    \>\>\> f = fib
+    \>\>\> f(100)
     0 1 1 2 3 5 8 13 21 34 55 89
 ```    
 
 Coming from other languages, you might object that `fib` is not a function but a procedure since it doesn't return a value. In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called `None` (it's a built-in name). Writing the value `None` is normally suppressed by the interpreter if it would be the only value written. You can see it if you really want to using print:
 ```lisp
-    >>> fib(0)
-    >>> print(fib(0))
+    \>\>\> fib(0)
+    \>\>\> print(fib(0))
     None
 ```    
 
 It is simple to write a function that returns a list of the numbers of the Fibonacci series, instead of printing it:
 ```lisp
-    >>> def fib2(n):  # return Fibonacci series up to n
+    \>\>\> def fib2(n):  # return Fibonacci series up to n
     ...     """Return a list containing the Fibonacci series up to n."""
     ...     result = []
     ...     a, b = 0, 1
-    ...     while a < n:
+    ...     while a \< n:
     ...         result.append(a)    # see below
     ...         a, b = b, a+b
     ...     return result
     ...
-    >>> f100 = fib2(100)    # call it
-    >>> f100                # write the result
+    \>\>\> f100 = fib2(100)    # call it
+    \>\>\> f100                # write the result
     [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 ```    
 
@@ -434,7 +434,7 @@ The most useful form is to specify a default value for one or more arguments. Th
             if ok in ('n', 'no', 'nop', 'nope'):
                 return False
             retries = retries - 1
-            if retries < 0:
+            if retries \< 0:
                 raise ValueError('invalid user response')
             print(reminder)
 ```            
@@ -494,7 +494,7 @@ If you don't want the default to be shared between subsequent calls, you can wri
 
 ### Keyword Arguments
 
-Functions can also be called using keyword arguments <keyword argument> of the form `kwarg=value`. For instance, the following function:
+Functions can also be called using keyword arguments \<keyword argument\> of the form `kwarg=value`. For instance, the following function:
 ```lisp
     def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
         print("-- This parrot wouldn't", action, end=' ')
@@ -523,16 +523,16 @@ but all the following calls would be invalid:
 
 In a function call, keyword arguments must follow positional arguments. All the keyword arguments passed must match one of the arguments accepted by the function (e.g. `actor` is not a valid argument for the `parrot` function), and their order is not important. This also includes non-optional arguments (e.g. `parrot(voltage=1000)` is valid too). No argument may receive a value more than once. Here's an example that fails due to this restriction:
 ```lisp
-    >>> def function(a):
+    \>\>\> def function(a):
     ...     pass
     ...
-    >>> function(0, a=0)
+    \>\>\> function(0, a=0)
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
+      File "\<stdin\>", line 1, in \<module\>
     TypeError: function() got multiple values for argument 'a'
 ```    
 
-When a final formal parameter of the form `**name` is present, it receives a dictionary (see typesmapping) containing all keyword arguments except for those corresponding to a formal parameter. This may be combined with a formal parameter of the form `*name` (described in the next subsection) which receives a tuple <tut-tuples> containing the positional arguments beyond the formal parameter list. (`*name` must occur before `**name`.) For example, if we define a function like this:
+When a final formal parameter of the form `**name` is present, it receives a dictionary (see typesmapping) containing all keyword arguments except for those corresponding to a formal parameter. This may be combined with a formal parameter of the form `*name` (described in the next subsection) which receives a tuple \<tut-tuples\> containing the positional arguments beyond the formal parameter list. (`*name` must occur before `**name`.) For example, if we define a function like this:
 ```lisp
     def cheeseshop(kind, *arguments, **keywords):
         print("-- Do you have any", kind, "?")
@@ -604,72 +604,72 @@ To mark parameters as *keyword-only*, indicating the parameters must be passed b
 
 Consider the following example function definitions paying close attention to the markers `/` and `*`:
 ```lisp
-    >>> def standard_arg(arg):
+    \>\>\> def standard_arg(arg):
     ...     print(arg)
     ...
-    >>> def pos_only_arg(arg, /):
+    \>\>\> def pos_only_arg(arg, /):
     ...     print(arg)
     ...
-    >>> def kwd_only_arg(*, arg):
+    \>\>\> def kwd_only_arg(*, arg):
     ...     print(arg)
     ...
-    >>> def combined_example(pos_only, /, standard, *, kwd_only):
+    \>\>\> def combined_example(pos_only, /, standard, *, kwd_only):
     ...     print(pos_only, standard, kwd_only)
 ```    
 
 The first function definition, `standard_arg`, the most familiar form, places no restrictions on the calling convention and arguments may be passed by position or keyword:
 ```lisp
-    >>> standard_arg(2)
+    \>\>\> standard_arg(2)
     2
 ```    
 ```lisp
-    >>> standard_arg(arg=2)
+    \>\>\> standard_arg(arg=2)
     2
 ```    
 
 The second function `pos_only_arg` is restricted to only use positional parameters as there is a `/` in the function definition:
 ```lisp
-    >>> pos_only_arg(1)
+    \>\>\> pos_only_arg(1)
     1
 ```    
 ```lisp
-    >>> pos_only_arg(arg=1)
+    \>\>\> pos_only_arg(arg=1)
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
+      File "\<stdin\>", line 1, in \<module\>
     TypeError: pos_only_arg() got some positional-only arguments passed as keyword arguments: 'arg'
 ```    
 
 The third function `kwd_only_args` only allows keyword arguments as indicated by a `*` in the function definition:
 ```lisp
-    >>> kwd_only_arg(3)
+    \>\>\> kwd_only_arg(3)
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
+      File "\<stdin\>", line 1, in \<module\>
     TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given
 ```    
 ```lisp
-    >>> kwd_only_arg(arg=3)
+    \>\>\> kwd_only_arg(arg=3)
     3
 ```    
 
 And the last uses all three calling conventions in the same function definition:
 ```lisp
-    >>> combined_example(1, 2, 3)
+    \>\>\> combined_example(1, 2, 3)
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
+      File "\<stdin\>", line 1, in \<module\>
     TypeError: combined_example() takes 2 positional arguments but 3 were given
 ```    
 ```lisp
-    >>> combined_example(1, 2, kwd_only=3)
+    \>\>\> combined_example(1, 2, kwd_only=3)
     1 2 3
 ```    
 ```lisp
-    >>> combined_example(1, standard=2, kwd_only=3)
+    \>\>\> combined_example(1, standard=2, kwd_only=3)
     1 2 3
 ```    
 ```lisp
-    >>> combined_example(pos_only=1, standard=2, kwd_only=3)
+    \>\>\> combined_example(pos_only=1, standard=2, kwd_only=3)
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
+      File "\<stdin\>", line 1, in \<module\>
     TypeError: combined_example() got some positional-only arguments passed as keyword arguments: 'pos_only'
 ```    
 
@@ -681,19 +681,19 @@ Finally, consider this function definition which has a potential collision betwe
 
 There is no possible call that will make it return `True` as the keyword `'name'` will always bind to the first parameter. For example:
 ```lisp
-    >>> foo(1, **{'name': 2})
+    \>\>\> foo(1, **{'name': 2})
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
+      File "\<stdin\>", line 1, in \<module\>
     TypeError: foo() got multiple values for argument 'name'
-    >>>
+    \>\>\>
 ```    
 
 But using `/` (positional only arguments), it is possible since it allows `name` as a positional argument and `'name'` as a key in the keyword arguments:
 ```lisp
-    >>> def foo(name, /, **kwds):
+    \>\>\> def foo(name, /, **kwds):
     ...     return 'name' in kwds
     ...
-    >>> foo(1, **{'name': 2})
+    \>\>\> foo(1, **{'name': 2})
     True
 ```    
 
@@ -724,12 +724,12 @@ Finally, the least frequently used option is to specify that a function can be c
 
 Normally, these *variadic* arguments will be last in the list of formal parameters, because they scoop up all remaining input arguments that are passed to the function. Any formal parameters which occur after the `*args` parameter are 'keyword-only' arguments, meaning that they can only be used as keywords rather than positional arguments. :
 ```lisp
-    >>> def concat(*args, sep="/"):
+    \>\>\> def concat(*args, sep="/"):
     ...     return sep.join(args)
     ...
-    >>> concat("earth", "mars", "venus")
+    \>\>\> concat("earth", "mars", "venus")
     'earth/mars/venus'
-    >>> concat("earth", "mars", "venus", sep=".")
+    \>\>\> concat("earth", "mars", "venus", sep=".")
     'earth.mars.venus'
 ```    
 
@@ -737,22 +737,22 @@ Normally, these *variadic* arguments will be last in the list of formal paramete
 
 The reverse situation occurs when the arguments are already in a list or tuple but need to be unpacked for a function call requiring separate positional arguments. For instance, the built-in range function expects separate *start* and *stop* arguments. If they are not available separately, write the function call with the `*`-operator to unpack the arguments out of a list or tuple:
 ```lisp
-    >>> list(range(3, 6))            # normal call with separate arguments
+    \>\>\> list(range(3, 6))            # normal call with separate arguments
     [3, 4, 5]
-    >>> args = [3, 6]
-    >>> list(range(*args))            # call with arguments unpacked from a list
+    \>\>\> args = [3, 6]
+    \>\>\> list(range(*args))            # call with arguments unpacked from a list
     [3, 4, 5]
 ```    
 
 In the same fashion, dictionaries can deliver keyword arguments with the `**`-operator:
 ```lisp
-    >>> def parrot(voltage, state='a stiff', action='voom'):
+    \>\>\> def parrot(voltage, state='a stiff', action='voom'):
     ...     print("-- This parrot wouldn't", action, end=' ')
     ...     print("if you put", voltage, "volts through it.", end=' ')
     ...     print("E's", state, "!")
     ...
-    >>> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
-    >>> parrot(**d)
+    \>\>\> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
+    \>\>\> parrot(**d)
     -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
 ```    
 
@@ -760,21 +760,21 @@ In the same fashion, dictionaries can deliver keyword arguments with the `**`-op
 
 Small anonymous functions can be created with the lambda keyword. This function returns the sum of its two arguments: `lambda a, b: a+b`. Lambda functions can be used wherever function objects are required. They are syntactically restricted to a single expression. Semantically, they are just syntactic sugar for a normal function definition. Like nested function definitions, lambda functions can reference variables from the containing scope:
 ```lisp
-    >>> def make_incrementor(n):
+    \>\>\> def make_incrementor(n):
     ...     return lambda x: x + n
     ...
-    >>> f = make_incrementor(42)
-    >>> f(0)
+    \>\>\> f = make_incrementor(42)
+    \>\>\> f(0)
     42
-    >>> f(1)
+    \>\>\> f(1)
     43
 ```    
 
 The above example uses a lambda expression to return a function. Another use is to pass a small function as an argument:
 ```lisp
-    >>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
-    >>> pairs.sort(key=lambda pair: pair[1])
-    >>> pairs
+    \>\>\> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+    \>\>\> pairs.sort(key=lambda pair: pair[1])
+    \>\>\> pairs
     [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 ```    
 
@@ -790,14 +790,14 @@ The Common Lisp parser does not strip indentation from multi-line string literal
 
 Here is an example of a multi-line docstring:
 ```lisp
-    >>> def my_function():
+    \>\>\> def my_function():
     ...     """Do nothing, but document it.
     ...
     ...     No, really, it doesn't do anything.
     ...     """
     ...     pass
     ...
-    >>> print(my_function.__doc__)
+    \>\>\> print(my_function.__doc__)
     Do nothing, but document it.
 ```    
 ```lisp
@@ -806,17 +806,17 @@ Here is an example of a multi-line docstring:
 
 ### Function Annotations
 
-Function annotations <function> are completely optional metadata information about the types used by user-defined functions (see 3107 and 484 for more information).
+Function annotations \<function\> are completely optional metadata information about the types used by user-defined functions (see 3107 and 484 for more information).
 
-Annotations <function annotation> are stored in the !__annotations__ attribute of the function as a dictionary and have no effect on any other part of the function. Parameter annotations are defined by a colon after the parameter name, followed by an expression evaluating to the value of the annotation. Return annotations are defined by a literal `->`, followed by an expression, between the parameter list and the colon denoting the end of the def statement. The following example has a required argument, an optional argument, and the return value annotated:
+Annotations \<function annotation\> are stored in the !__annotations__ attribute of the function as a dictionary and have no effect on any other part of the function. Parameter annotations are defined by a colon after the parameter name, followed by an expression evaluating to the value of the annotation. Return annotations are defined by a literal `-\>`, followed by an expression, between the parameter list and the colon denoting the end of the def statement. The following example has a required argument, an optional argument, and the return value annotated:
 ```lisp
-    >>> def f(ham: str, eggs: str = 'eggs') -> str:
+    \>\>\> def f(ham: str, eggs: str = 'eggs') -\> str:
     ...     print("Annotations:", f.__annotations__)
     ...     print("Arguments:", ham, eggs)
     ...     return ham + ' and ' + eggs
     ...
-    >>> f('spam')
-    Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
+    \>\>\> f('spam')
+    Annotations: {'ham': \<class 'str'\>, 'return': \<class 'str'\>, 'eggs': \<class 'str'\>}
     Arguments: spam eggs
     'spam and eggs'
 ```    
