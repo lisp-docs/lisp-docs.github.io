@@ -83,6 +83,7 @@ const config = {
           {to: '/about', label: 'About', position: 'left'},
           {to: '/getting-started', label: 'Getting Started', position: 'left'},
           {to: '/faq', label: 'FAQ', position: 'left'},
+          {to: '/help', label: 'Getting Help', position: 'left'},
           {to: '/contribue', label: 'Contribute!', position: 'left'},
           {
             href: 'https://github.com/lisp-docs',
@@ -101,6 +102,10 @@ const config = {
                 label: 'Tutorial',
                 to: '/docs/intro',
               },
+              {
+                label: 'Help',
+                to: '/help',
+              }
             ],
           },
           {
@@ -112,11 +117,15 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/hhk46CE',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/common_lisp',
+              },
+              {
+                label: 'IRC',
+                href: 'https://irclog.tymoon.eu/libera/commonlisp',
               },
             ],
           },
@@ -129,7 +138,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/lisp-docs',
               },
             ],
           },
