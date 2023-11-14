@@ -107,6 +107,8 @@ This is quite long winded for such a common pattern. It would be clearer and mor
         ((= ,a ,b) ,=)
         (t        ,>)))
 ```
+### Destructuring lambda lists
+Unlike ordinary functions where arguments are interpreted and bound according to an ordinary lambda list, the arguments to a macro are destructured, and defined by a destructuring lambda list. This means we can define a macro which takes structured arguments and have the variables bound automatically. In `compare` we have put `a` and `b` into their own list for clarity.
 
 ```lisp
 * (let ((x 100)
