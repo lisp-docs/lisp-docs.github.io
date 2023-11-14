@@ -3,6 +3,7 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 import { useHistory } from "@docusaurus/router";
+import Link from "@docusaurus/Link";
 // import { useNavigate } from "react-router-dom";
 
 // https://undraw.co/illustrations
@@ -21,7 +22,7 @@ const FeatureList = [
   },
   {
     title: "Technical Reference",
-    link: "",
+    link: "https://lisp-docs.github.io/cl-language-reference/",
     // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -57,12 +58,20 @@ function SimpleCard({ title, description, link, buttonText }) {
   const history = useHistory();
   // https://infima.dev/docs/components/card#simple-card
 
+  function conditionalNavigate(link) {
+    if (link.startsWith("http")) {
+      window.open(link);
+    } else {
+      history.push(link);
+    }
+  }
+
   return (
     <div
       className={clsx(
         "col col--3 card-demo padding-horiz--md padding-vert--md"
       ) + " " + styles["clickable"]}
-      onClick={() => history.push(link)}
+      onClick={() => conditionalNavigate(link)}
     >
       <div className="card">
         <div className="card__header">
@@ -73,7 +82,7 @@ function SimpleCard({ title, description, link, buttonText }) {
         </div>
         <div className="card__footer">
           <button 
-            onClick={() => history.push(link)}
+            onClick={() => conditionalNavigate(link)}
             className="button button--secondary button--block"
           >
             {buttonText && buttonText}
