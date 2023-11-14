@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
+import { useNavigate } from "react-router-dom";
+import { useHistory } from "@docusaurus/router";
 // import { useNavigate } from "react-router-dom";
 
 // https://undraw.co/illustrations
@@ -23,8 +25,8 @@ const FeatureList = [
     // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Right now we are building a new Open Source, MIT Licensed HyperSpec from
-        the last ANSI Draft.
+        Right now we are building a new Open Source, MIT Licensed, Technical Reference from
+        the last ANSI Draft. An improved standard with many examples.
       </>
     ),
   },
@@ -41,30 +43,39 @@ const FeatureList = [
     link: "",
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
-      <>The original Lisp Standard Draft version, now freely available. 
-      This is meant mainly for people who write Lisp Systems and Compilers. 
-      For the Application Programmer please see the Technical Reference. </>
+      <>
+        The original Lisp Standard Draft version, now freely available. This is
+        meant mainly for people who write Lisp Systems and Compilers. For the
+        Application Programmer please see the Technical Reference.{" "}
+      </>
     ),
   },
 ];
 
-function SimpleCard({title, description, link, buttonText}) {
+function SimpleCard({ title, description, link, buttonText }) {
   // const navigate = useNavigate();
+  const history = useHistory();
   // https://infima.dev/docs/components/card#simple-card
-  // onClick={() => navigate(link)}
+
   return (
-    <div className={clsx("col col--3 card-demo padding-horiz--md padding-vert--md")}>
+    <div
+      className={clsx(
+        "col col--3 card-demo padding-horiz--md padding-vert--md"
+      ) + " " + styles["clickable"]}
+      onClick={() => history.push(link)}
+    >
       <div className="card">
         <div className="card__header">
           <h3>{title}</h3>
         </div>
         <div className="card__body">
-          <p>
-            {description}
-          </p>
+          <p>{description}</p>
         </div>
         <div className="card__footer">
-          <button className="button button--secondary button--block">
+          <button 
+            onClick={() => history.push(link)}
+            className="button button--secondary button--block"
+          >
             {buttonText && buttonText}
             {!buttonText && "Read Now"}
           </button>
@@ -94,11 +105,18 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        {/* <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <SimpleCard key={idx} {...props} />
           ))}
-          {FeatureList.map((props, idx) => (
+        </div> */}
+        <div className={"row " + styles["cardsRow"]}>
+          {FeatureList.slice(0, 2).map((props, idx) => (
+            <SimpleCard key={idx} {...props} />
+          ))}
+        </div>
+        <div className={"row " + styles["cardsRow"]}>
+          {FeatureList.slice(2, 4).map((props, idx) => (
             <SimpleCard key={idx} {...props} />
           ))}
         </div>

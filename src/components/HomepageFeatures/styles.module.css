@@ -9,3 +9,13 @@
   height: 200px;
   width: 200px;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.cardsRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
