@@ -6,7 +6,7 @@ One of the most distinctive features of Common Lisp is its macros. In most other
 
 Macros have multiple uses. They can introduce new syntax to the language, control when code is evaluated and how many times, elminate repetitive boilerplate or make programs more efficient by doing computation at compile time.
 
-## AND
+### AND
 
 Suppose we have some lisp forms and we want to check they all evaluate to true. The obvious way to write this is (and a b c), where a b and c are some arbitrary lisp forms. We could implement this as a function, using rest parameters and recursion to operate on an arbitrary number of values before returning either the final value, or nil if any of the other values are nil.
 
@@ -55,7 +55,7 @@ Our missile silo controller is expanded at compile time to
 
 If an argument evaluates to nil, the chain of `if` statements is broken and none of the remaining arguments are evaulated.
 
-## Backquote
+### Backquote
 
 Common Lisp's backquote syntax is very useful tool for constructing code in macros and complex data structures generally. Instead of constructing a data structure with functions like `cons` `list` and `append`, one can simple write a quoted template and insert values into it by unquoting with commas.
 For instance, instead of
@@ -90,7 +90,7 @@ OBJECT
 
 Backquote is extremely useful for generating code in macros. Subsequent examples will make heavy use of it.
 
-## Comparing numbers
+### Comparing numbers
 
 Quite a program needs to compare numbers and do something different depending on which is larger. In Lisp we could use a `cond` form like this
 
@@ -181,3 +181,20 @@ This can be expressed far more elegantly using the `once-only` macro, originally
            ((= ,a ,b) ,=)
            (t         ,>))))
 ```
+
+## Understanding Macros
+
+### Time of Evaluation
+
+\\ <!-- The below use of the <code> tag is because of an issue with rendering the backtick https://github.com/facebook/docusaurus/issues/2004 -->
+### The `,` Comma, <code>&#096;</code> Back Quote, and `'` Quote operators
+
+### The `@` Splice operator
+
+### Declaring Variables with GENSYM
+
+## Variable Capture
+
+## Classic Macro Pitfalls
+
+## Reader Macros
