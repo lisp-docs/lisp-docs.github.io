@@ -116,7 +116,6 @@ Unlike ordinary functions where arguments are interpreted and bound according to
     (compare (x y) 'y-is-bigger 'both-equal 'x-is-bigger))
 X-IS-BIGGER
 ```
-### Unintentional repeated evaluation
 This appears to work but there is a problem.
 ```lisp
 * (let ((x 11)
@@ -124,7 +123,8 @@ This appears to work but there is a problem.
     (compare ((decf x) y) 'b-is-bigger 'both-equal 'a-is-bigger))
 A-IS-BIGGER
 ```
-If x is 11 `(decf x)` should return 10, so the result we would expect is BOTH-EQUAL.
+### Unintentional repeated evaluation
+If x is 11, `(decf x)` will decrement `x` and return 10, so the result we would expect is BOTH-EQUAL.
 What is happening is that when the first test, `(< ,a ,b)`, fails, a and b are evaluated again in the second test where we have `(= ,a ,b)`. Arguments to a macro are not evaluated until after the macro is expanded, so if our macro returns a form which contains `a` twice, it will be evaluated twice. For functions which have side effects or require a lot of computation, this is not good.
 
 We can solve this problem by generating code to evaluate a and b and bind them to variables before comparing them.
