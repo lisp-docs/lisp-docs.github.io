@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+// import remarkTok from "remark-toc";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -46,8 +47,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // rehypePlugins: [
+          //   [remarkTok, {strict: false}],
+          // ],
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -109,6 +111,10 @@ const config = {
                 to: '/docs/intro',
               },
               {
+                label: 'Cl Technical Reference',
+                to: 'https://github.com/lisp-docs/cl-language-reference/',
+              },
+              {
                 label: 'Help',
                 to: '/help',
               }
@@ -149,7 +155,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} is an MIT License (see GitHub Repo).`,
+        copyright: `Copyright © ${new Date().getFullYear()} LISP Docs, MIT License (see GitHub Repo).`,
       },
       prism: {
         theme: prismThemes.github,
