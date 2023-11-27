@@ -160,7 +160,8 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['powershell', 'python',  'lisp',],
+        // https://prismjs.com/#supported-languages
+        additionalLanguages: ['powershell', 'python',  'lisp', 'bash',],
       },
     }),
 };
