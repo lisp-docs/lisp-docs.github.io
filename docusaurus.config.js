@@ -70,6 +70,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name:"google-site-verification", content:"Vzaw013_bfdKeUVG89Ch3W1zC9_vH9ID2dPB9Dz0vr0"},
+      ],
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
       image: 'img/1024px-Lisp_logo.svg.png',
@@ -86,7 +89,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: 'https://lisp-docs.github.io/cl-language-reference/', label: 'Reference', position: 'left'},
+          {to: 'https://lisp-docs.github.io/cl-language-reference/', label: 'Technical Reference', position: 'left'},
           {to: '/getting-started', label: 'Getting Started', position: 'left'},
           {to: '/contribue', label: 'Contribute!', position: 'left'},
           {to: '/about', label: 'About', position: 'right'},
