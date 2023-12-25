@@ -163,6 +163,8 @@ const config = {
             title: 'Common Lisp Docs',
             items: [
               {label: 'About', to: '/about'},
+              {label: 'Why Lisp', to: '/about'},
+              {label: 'Getting Started', to: '/about'},
               {label: 'FAQ', to: '/docs/faq'},
               {label: 'Getting Help', to: '/help'},
               {label: 'How and What to Contribute', to: '/docs/contribute'},

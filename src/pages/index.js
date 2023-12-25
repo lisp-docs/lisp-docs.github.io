@@ -7,6 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 import 'react-tooltip/dist/react-tooltip.css'
+import ReferenceFeatures from '../components/ReferenceFeatures';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -47,6 +48,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <ReferenceFeatures />
       </main>
     </Layout>
   );
