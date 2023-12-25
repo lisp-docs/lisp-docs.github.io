@@ -17,7 +17,7 @@ This website [CL LISP Reference](https://lisp-docs.github.io/cl-language-referen
 
 We will hopefully soon come up with a tutorials website and more!
 
-We aim to make this website as comprehensive as websites for other languages using [Python](https://www.python.org/) as an example...
+We aim to make this website as comprehensive as websites for other languages.
 
 Adding some sample code below...
 

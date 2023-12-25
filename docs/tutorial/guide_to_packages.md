@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # The Complete Idiot’s Guide to Common Lisp Packages
 
 > Erann Gat

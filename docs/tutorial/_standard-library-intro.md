@@ -4,9 +4,10 @@ sidebar_position: 10
 
 # An Introduction to the Standard Library
 
-Need to populate this. Probably similarly to 
-- https://docs.python.org/3/tutorial/stdlib.html 
-- https://docs.python.org/3/tutorial/stdlib2.html
+Need to populate this.
+<!-- Probably similarly to  -->
+<!-- - https://docs.python.org/3/tutorial/stdlib.html  -->
+<!-- - https://docs.python.org/3/tutorial/stdlib2.html -->
 
 but for CL...
 

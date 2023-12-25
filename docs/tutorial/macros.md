@@ -1,3 +1,8 @@
+---
+sidebar_position: 0
+---
+
+
 # Macros
 
 One of the most distinctive features of Common Lisp is its macros. Macros are special functions which operate on code before it is compiled. In most other languages, code is strutured according to a fairly complex syntax, which is parsed to generate an abstract syntax tree. This is designed to be used internally by the compiler or interpreter and writing functions which operate on code is generally very challenging.

@@ -10,4 +10,5 @@ The Common LISP Object System.
 
 ## Generics, and Methods
 
-Need to populate this. Probably similarly to https://docs.python.org/3/tutorial/classes.html but for CL...
+Need to populate this.
+<!-- Probably similarly to https://docs.python.org/3/tutorial/classes.html but for CL... -->

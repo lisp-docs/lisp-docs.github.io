@@ -1,6 +1,6 @@
 <!-- about.md -->
 
-# About LISP Docs
+# About Common Lisp Docs
 
 The goal of this page is to make it easier for new (and experienced) lisp users to navigate through LISP Documentation by both manking the already existing documentation easier to navigate and by developing new documentation.
 
