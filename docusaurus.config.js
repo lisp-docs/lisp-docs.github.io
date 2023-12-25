@@ -94,10 +94,10 @@ const config = {
           { to: "/docs/whylisp", label: "Why Lisp?", position: "left" },
           { to: "/docs/contribute", label: "Contribute!", position: "right" },
           // {to: '/contribue', label: 'Contribute!', position: 'left'},
-          {to: '/about', label: 'About', position: 'right'},
-          {to: '/blog', label: 'Blog', position: 'right'},
           {to: '/faq', label: 'FAQ', position: 'right'},
           {to: '/help', label: 'Getting Help', position: 'right'},
+          {to: '/about', label: 'About', position: 'right'},
+          {to: '/blog', label: 'Blog', position: 'right'},
           {
             href: 'https://github.com/lisp-docs/lisp-docs.github.io',
             label: 'GitHub',
@@ -157,6 +157,15 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/lisp-docs/lisp-docs.github.io',
               },
+            ],
+          },
+          {
+            title: 'Common Lisp Docs',
+            items: [
+              {label: 'About', to: '/about'},
+              {label: 'FAQ', to: '/docs/faq'},
+              {label: 'Getting Help', to: '/help'},
+              {label: 'How and What to Contribute', to: '/docs/contribute'},
             ],
           },
         ],

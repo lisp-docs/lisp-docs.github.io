@@ -1,4 +1,8 @@
-# Contribute to the CL Technical Reference
+---
+sidebar_position: 2
+---
+
+# Technical Reference
 
 ## How To Contribute
 

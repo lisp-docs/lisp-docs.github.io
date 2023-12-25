@@ -6,6 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import 'react-tooltip/dist/react-tooltip.css'
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -23,6 +24,15 @@ function HomepageHeader() {
             Quickstart - 5min ⏱️
           </Link>
         </div>
+      <br/>
+      <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/intro">
+            Read the Reference
+          </Link>
+        </div>
+        <br />
       </div>
     </header>
   );

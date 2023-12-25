@@ -1,6 +1,8 @@
-<!-- contribue.md -->
-
-# Contribute to LISP Docs
+---
+title: 'LISP Docs'
+sidebar_position: 1
+---
+# LISP Docs
 
 ## How To Contribute
 
