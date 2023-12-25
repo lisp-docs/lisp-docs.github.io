@@ -1,5 +1,6 @@
 ---
 sidebar_position: 99
+slug: 'index'
 ---
 
 # Index

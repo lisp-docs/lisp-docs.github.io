@@ -21,9 +21,18 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/getting-started"
           >
             Quickstart - 5min ⏱️
+          </Link>
+        </div>
+        <br />
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/tutorial"
+          >
+            Read the Tutorial
           </Link>
         </div>
         <br />
@@ -52,6 +61,11 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <hr />
+        <div className="text--center padding-horiz--md margin-bottom--lg">
+          <Heading as="h1">About The Tehcnical Reference</Heading>
+          {/* {description} */}
+        </div>
+        {/* <h1>The Tehcnical Reference</h1> */}
         <ReferenceFeatures />
       </main>
     </Layout>
