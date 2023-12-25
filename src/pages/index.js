@@ -1,18 +1,18 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-import 'react-tooltip/dist/react-tooltip.css'
-import ReferenceFeatures from '../components/ReferenceFeatures';
+import Heading from "@theme/Heading";
+import styles from "./index.module.css";
+import "react-tooltip/dist/react-tooltip.css";
+import ReferenceFeatures from "../components/ReferenceFeatures";
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -21,16 +21,18 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/intro"
+          >
             Quickstart - 5min ⏱️
           </Link>
         </div>
-      <br/>
-      <div className={styles.buttons}>
+        <br />
+        <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Read the Reference
+            to="https://lisp-docs.github.io/cl-language-reference/"
+          >
+            Read the Technical Reference
           </Link>
         </div>
         <br />
@@ -40,14 +42,16 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="The (Un)Official Lisp Documentation">
+      description="The (Un)Official Lisp Documentation"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <hr />
         <ReferenceFeatures />
       </main>
     </Layout>

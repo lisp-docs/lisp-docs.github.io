@@ -9,8 +9,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Lisp Docs',
-  tagline: 'The (Un)Official LISP Documentation ',
+  title: 'Common Lisp Docs',
+  tagline: 'The (Un)Official Common Lisp Documentation ',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -77,9 +77,9 @@ const config = {
       // image: 'img/docusaurus-social-card.jpg',
       image: 'img/1024px-Lisp_logo.svg.png',
       navbar: {
-        title: 'LISP Docs',
+        title: 'Common Lisp Docs',
         logo: {
-          alt: 'LISP Logo',
+          alt: 'Lisp Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -89,12 +89,12 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/getting-started', label: 'Getting Started', position: 'left'},
+          {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
           {to: 'https://lisp-docs.github.io/cl-language-reference/', label: 'Technical Reference', position: 'left'},
           { to: "/docs/whylisp", label: "Why Lisp?", position: "left" },
           { to: "/docs/contribute", label: "Contribute!", position: "right" },
           // {to: '/contribue', label: 'Contribute!', position: 'left'},
-          {to: '/faq', label: 'FAQ', position: 'right'},
+          {to: '/docs/faq', label: 'FAQ', position: 'right'},
           {to: '/help', label: 'Getting Help', position: 'right'},
           {to: '/about', label: 'About', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
@@ -171,7 +171,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} LISP Docs, MIT License (see GitHub Repo).`,
+        copyright: `Copyright © ${new Date().getFullYear()} Common Lisp Docs, MIT License (see GitHub Repo).`,
       },
       prism: {
         theme: prismThemes.github,
