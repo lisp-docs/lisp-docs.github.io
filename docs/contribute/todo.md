@@ -25,7 +25,7 @@ We need help writing any of these sections:
 
 ## Done
 
-- ~~All the *Dictionary* Sections have to be separated in the docs. For example, all of section 9.2 in the original is included in our [9.1](/docs/chap-9/j-b-condition-system-concepts). We need to split that file into two. Similarly for chapters~~
+- ~~All the *Dictionary* Sections have to be separated in the docs. For example, all of section 9.2 in the original is included in our [9.1](https://lisp-docs.github.io/cl-language-reference/docs/chap-9/j-b-condition-system-concepts). We need to split that file into two. Similarly for chapters~~
   - ~~3.8~~
   - ~~4.4~~
   - ~~5.3~~
