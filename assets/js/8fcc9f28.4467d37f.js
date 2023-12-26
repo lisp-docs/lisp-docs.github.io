@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[2639],{7142:s=>{s.exports=JSON.parse('{"label":"tables","permalink":"/blog/tags/tables","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

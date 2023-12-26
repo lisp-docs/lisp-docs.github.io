@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[2535],{5641:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Mission","permalink":"/blog/mission","unlisted":false},{"title":"TODO","permalink":"/blog/TODO","unlisted":false}]}')}}]);

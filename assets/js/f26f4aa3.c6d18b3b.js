@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[2021],{2341:o=>{o.exports=JSON.parse('{"permalink":"/blog/tags/code-blocks","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

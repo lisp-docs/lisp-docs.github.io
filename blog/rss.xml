@@ -1,13 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Lisp Docs Blog</title>
+        <title>Common Lisp Docs Blog</title>
         <link>https://lisp-docs.github.io/blog</link>
-        <description>Lisp Docs Blog</description>
-        <lastBuildDate>Sun, 12 Nov 2023 00:00:00 GMT</lastBuildDate>
+        <description>Common Lisp Docs Blog</description>
+        <lastBuildDate>Sun, 24 Dec 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Beta Version Released!]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/24/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/24/</guid>
+            <pubDate>Sun, 24 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Finally, I can announe that the beta version is out!]]></description>
+            <content:encoded><![CDATA[<p>Finally, I can announe that the <strong>beta version</strong> is out!</p>
+<p>This is what I updated since last time:</p>
+<ul>
+<li>Parsed again all the specification to account for missing/overwritten pages because of similarly named items.</li>
+<li>Added glossary definition tooltips everywhere I could (programatically, we can add more by hand by identifying any place missing a definition).</li>
+<li>Added all the links of "See Also" and any time something is referenced in the text of the specification, the link for that item should now be working.</li>
+<li>Added a lot of code blocks for example sections to provide syntax highlighting. Not all of the code in the reference is inside a code block, but most of them are. The rest most be parsed manually.</li>
+</ul>
+<p>Enjoy!</p>]]></content:encoded>
+            <category>status</category>
+            <category>beta</category>
+            <category>beginning</category>
+            <category>tooltips</category>
+            <category>parsing</category>
+        </item>
+        <item>
+            <title><![CDATA[Update: Last Parsing of the Spec Done!]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/21/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/21/</guid>
+            <pubDate>Thu, 21 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is a major update. This is basically (hopefully) the last time we parsed the specification. There were a few bugs in the previous parsing which led to some missing pages because they were overwritten when multiple dictionary items shared the same name.]]></description>
+            <content:encoded><![CDATA[<p>This is a major update. This is basically (hopefully) the last time we parsed the specification. There were a few bugs in the previous parsing which led to some missing pages because they were overwritten when multiple dictionary items shared the same name.</p>
+<p>With this parsing, I fixed a bunch of other issues, so hopefully this will be the last parsing update, and from here on out it will just be manual updates to this project.</p>
+<p>So this makes it version 2.0 beta is out!</p>
+<p>Additionally, the glossary has been parsed again, and improved dramatically, so that the tooltips should now show, and have proper html rendering.</p>]]></content:encoded>
+            <category>status</category>
+            <category>dictionary-items</category>
+        </item>
+        <item>
+            <title><![CDATA[Update: Dictionary Items Status]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/17/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/17/</guid>
+            <pubDate>Sun, 17 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Many dictionary item pages were updated. However, we still need to check quite a few chapters. In particular from chapter 12 to chapter 21 inclusive, we need to check the table of contents vs the standard specification dictionary items for that chapter.]]></description>
+            <content:encoded><![CDATA[<p>Many dictionary item pages were updated. However, we still need to check quite a few chapters. In particular from chapter 12 to chapter 21 inclusive, we need to check the table of contents vs the <a href="https://github.com/lisp-docs/cl-standard/blob/master/new-spec/spec-source-pdf/cl-ansi-standard-draft-w-sidebar.pdf" target="_blank" rel="noopener noreferrer">standard specification</a> dictionary items for that chapter.</p>]]></content:encoded>
+            <category>status</category>
+            <category>dictionary-items</category>
+        </item>
+        <item>
+            <title><![CDATA[Latest Updates: Definitions Tooltip and others]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/12/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/12/</guid>
+            <pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Definitions Tooltip]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="definitions-tooltip">Definitions Tooltip<a href="https://lisp-docs.github.io/blog/2023/12/12/#definitions-tooltip" class="hash-link" aria-label="Direct link to Definitions Tooltip" title="Direct link to Definitions Tooltip">​</a></h2>
+<p>I made a react component tooltip for definitions to show you the definition of a term in place instead of a having to navigate to the glossary page. In addition, the same tooltip will link to the proper dictionary item if it exists, and if not, to the glossary page of the term. We still need to add the component all around, but this should make the functionality of the page much better. Here's an example: <a href="https://lisp-docs.github.io/cl-language-reference/docs/chap-6/g-b-the-loop-facility" target="_blank" rel="noopener noreferrer">See the "forms" word in section 6.1.1.1 of Loops</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dictionary-pages">Dictionary Pages<a href="https://lisp-docs.github.io/blog/2023/12/12/#dictionary-pages" class="hash-link" aria-label="Direct link to Dictionary Pages" title="Direct link to Dictionary Pages">​</a></h2>
+<p>There are a bunch of dictionary pages that did not get split correctly, so instead of showing up as a different page, they are part of another page. I've been checking them manually (a lot of work) and have made <a href="https://lisp-docs.github.io/docs/contribute">a list</a> of about half the chapters. The rest need to be checked. I hope to make a script to help splitting a lot of these pages. Please help identifying the pages in the missing chapters as they are marked.</p>]]></content:encoded>
+            <category>status</category>
+            <category>beginning</category>
+        </item>
+        <item>
+            <title><![CDATA[Code Blocks Indented]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/07/code-indented</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/07/code-indented</guid>
+            <pubDate>Thu, 07 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Code Blocks Indented]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="code-blocks-indented">Code Blocks Indented<a href="https://lisp-docs.github.io/blog/2023/12/07/code-indented#code-blocks-indented" class="hash-link" aria-label="Direct link to Code Blocks Indented" title="Direct link to Code Blocks Indented">​</a></h2>
+<p>Good news, now the code blocks look even better! I indented them using the emacs indentation so it follows the conventional indentation. Changes made to 414 files <!-- -->:D</p>
+<p>Enjoy!</p>]]></content:encoded>
+            <category>status</category>
+            <category>beginning</category>
+            <category>glossary</category>
+        </item>
+        <item>
+            <title><![CDATA[Glossary Improved!]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/07/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/07/</guid>
+            <pubDate>Thu, 07 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Glossary Improved]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="glossary-improved">Glossary Improved<a href="https://lisp-docs.github.io/blog/2023/12/07/#glossary-improved" class="hash-link" aria-label="Direct link to Glossary Improved" title="Direct link to Glossary Improved">​</a></h2>
+<p>The glossary has now:</p>
+<ul>
+<li>Been split into multiple pages, one per letter</li>
+<li>The legend and introduction have their page</li>
+<li>A lot of the text was fixed for formatting issues, this was the bulk of the work</li>
+</ul>]]></content:encoded>
+            <category>status</category>
+            <category>beginning</category>
+            <category>glossary</category>
+        </item>
+        <item>
+            <title><![CDATA[Alpha Version 1.0 is Out!]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/06/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/06/</guid>
+            <pubDate>Wed, 06 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Finally, we are at Alpha, version 1.0 is out!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="finally-we-are-at-alpha-version-10-is-out">Finally, we are at Alpha, version 1.0 is out!<a href="https://lisp-docs.github.io/blog/2023/12/06/#finally-we-are-at-alpha-version-10-is-out" class="hash-link" aria-label="Direct link to Finally, we are at Alpha, version 1.0 is out!" title="Direct link to Finally, we are at Alpha, version 1.0 is out!">​</a></h2>
+<p>As of today, 2023/12/06 the Alpha version of the technical reference is out.</p>
+<p>These are a few of the improvements since last time:</p>
+<ul>
+<li>Complete Specification Update: There were parts of the spec missing because of an issue of files getting truncated before they were converted into markdown. I have now recovered the truncated parts, parsed them, and added them to the specification</li>
+<li>A large amount of code now shows up in code blocks with syntax highlighting.</li>
+<li>A lot of symbols like <code>→</code>, <code>≡</code>, and a few others are now properly displayed</li>
+<li>The Index, Figures, and Credits were parsed to be displayed properly per the original</li>
+<li>The search index was updated to account for the new content</li>
+<li>A bunch of formatting issues for the markdown to be displayed properly</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-alpha-version-means">What Alpha version means<a href="https://lisp-docs.github.io/blog/2023/12/06/#what-alpha-version-means" class="hash-link" aria-label="Direct link to What Alpha version means" title="Direct link to What Alpha version means">​</a></h2>
+<ul>
+<li>Now we are finally open to contributions of examples and added explanation<!-- -->
+<ul>
+<li>Contribution stubs were added at the end of Dictionary Items type pages see for example <a href="https://lisp-docs.github.io/cl-language-reference/docs/chap-5/f-d-dictionary/progn#expanded-reference-progn" target="_blank" rel="noopener noreferrer">progn</a></li>
+</ul>
+</li>
+<li>The main text is unlikely to change much except for:<!-- -->
+<ul>
+<li>Minor formatting issues</li>
+<li>Maybe there are still some symbols that are not rendering properly</li>
+<li>Code Blocks for syntax highlighting in the non dictionary type pages have not yet been added</li>
+<li>Tables have to be formatted</li>
+</ul>
+</li>
+<li>Therefore we are open to other contributions that are more meaningful in terms of content and development, please see our <a href="https://lisp-docs.github.io/docs/contribute/todo">To Do Page</a> for how you can contribute!</li>
+</ul>]]></content:encoded>
+            <category>status</category>
+            <category>beginning</category>
+        </item>
+        <item>
+            <title><![CDATA[Dicionary Pages Broken Up]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/12/03/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/12/03/</guid>
+            <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Dicionary Sections]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dicionary-sections">Dicionary Sections<a href="https://lisp-docs.github.io/blog/2023/12/03/#dicionary-sections" class="hash-link" aria-label="Direct link to Dicionary Sections" title="Direct link to Dicionary Sections">​</a></h2>
+<p>As of now, 2023/12/03, all the dicionary pages have been broken up into their particular directories with a page per entry.</p>
+<p>However there are still a few that need to be manually fixed because of problems with parsing the text with regex for certain exceptions.</p>
+<p>Nevertheless, this improves the search results dramatically! The reference should now be much easier to use!</p>
+<p>I also added a <a href="https://lisp-docs.github.io/docs/contribute">Dicionary Item's To Do Page</a> for adding specific examples.</p>
+<p>Cheers!</p>]]></content:encoded>
+            <category>status</category>
+            <category>beginning</category>
+        </item>
+        <item>
+            <title><![CDATA[Search Implemented!]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/11/30/update</link>
+            <guid>https://lisp-docs.github.io/blog/2023/11/30/update</guid>
+            <pubDate>Thu, 30 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Search for the Technical Reference]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="search-for-the-technical-reference">Search for the Technical Reference<a href="https://lisp-docs.github.io/blog/2023/11/30/update#search-for-the-technical-reference" class="hash-link" aria-label="Direct link to Search for the Technical Reference" title="Direct link to Search for the Technical Reference">​</a></h2>
+<p>Search for the Technical Reference has now been implemented! Please try it with <code>Ctrl+K</code> or <code>CMD-K</code> and enjoy! <!-- -->😄</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="home-page-updates">Home Page Updates<a href="https://lisp-docs.github.io/blog/2023/11/30/update#home-page-updates" class="hash-link" aria-label="Direct link to Home Page Updates" title="Direct link to Home Page Updates">​</a></h2>
+<p>We also updated the <a href="https://lisp-docs.github.io/">Home Page</a> content.</p>]]></content:encoded>
+            <category>status</category>
+            <category>search</category>
+            <category>features</category>
+            <category>beginning</category>
+        </item>
+        <item>
+            <title><![CDATA[Code Blocks and Tables]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/11/29/</link>
+            <guid>https://lisp-docs.github.io/blog/2023/11/29/</guid>
+            <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Code Blocks]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="code-blocks">Code Blocks<a href="https://lisp-docs.github.io/blog/2023/11/29/#code-blocks" class="hash-link" aria-label="Direct link to Code Blocks" title="Direct link to Code Blocks">​</a></h2>
+<p>The current status is that for some reason replacing the code with lisp formatted code blocks was failing due to regex issues.</p>
+<p>Here are the lisp highlighted code blocks. <strong>Edit:</strong> removed link.</p>
+<p>If you find any code that is not highlighted, please find the appropiate code block and replace it in the code!</p>]]></content:encoded>
+            <category>status</category>
+            <category>todo</category>
+            <category>beginning</category>
+            <category>code-blocks</category>
+            <category>tables</category>
+        </item>
+        <item>
+            <title><![CDATA[Current Status]]></title>
+            <link>https://lisp-docs.github.io/blog/2023-11-26-status</link>
+            <guid>https://lisp-docs.github.io/blog/2023-11-26-status</guid>
+            <pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[So finally, first version is out!]]></description>
+            <content:encoded><![CDATA[<p>So finally, first version is out!</p>
+<p>However, this is a work in progress.</p>
+<p>These are the changes that are needed for it to reach a version 1.0:</p>
+<ol>
+<li><del>Fix all the markdown titles for the right side panel navigation bar. For some reason during the parsing, some of the titles got messed up in the navigation bar. The titles in the actual content are repeated. The second one must also be removed.</del> <strong>Edit: 2023/11/26</strong></li>
+<li>Need to link up all italics to the actual page in the reference.</li>
+<li>Need to fix the tables in all the files. Idea: Could find each table in the original TeX files and parse those and replace the text in the current markdown since the original is hopefully structured.</li>
+<li>Need to parse and find every bit of lisp code and wrap it in the proprer ``` backquote wrappers with the lisp syntax for pretty print. See #3, could try to see if the original TeX marked code blocks and use those with text replace.</li>
+<li>Make sure everything else is good!</li>
+<li><del>Change the <code>_category_.json</code> files to display position of chapters in sidebar correctly...</del> <strong>Edit: 2023/11/27</strong></li>
+<li><del>Change the <code>_category_.json</code> contents to use double quotes instead of single quotes...</del> <strong>Edit: 2023/11/27</strong></li>
+<li>Add search plugin</li>
+<li>"beach": "The description of each operator should probably be on a separate page, because for the language reference, more material will be added there"</li>
+</ol>
+<p>However, with that said, the project is actually ready for contributions!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-the-project-is-structured">How The Project is Structured<a href="https://lisp-docs.github.io/blog/2023-11-26-status#how-the-project-is-structured" class="hash-link" aria-label="Direct link to How The Project is Structured" title="Direct link to How The Project is Structured">​</a></h2>
+<p>The idea here was to separate the files with the original dpANS3r text from the community additions. Therefore, to add examples or any content, just create a new file. Please name it relevant to the section you will add it to, and then just import it in that section like all the other files are imported.</p>
+<p>So instead of writing the examples in the dpANS3r itself, it will be a new file <code>examples.md</code> where you can write anything you want. Then you would import it wherever relevant.</p>
+<p>Please note that because react doesn't seem to allow using numbers in component names, I had to convert all numbers to letters. <code>A=0</code>, <code>B=1</code>, etc...</p>]]></content:encoded>
+            <category>status</category>
+            <category>todo</category>
+            <category>beginning</category>
+        </item>
         <item>
             <title><![CDATA[Mission]]></title>
             <link>https://lisp-docs.github.io/blog/mission</link>
@@ -18,10 +217,22 @@
 <p>The Docs in this Website are aimed to be a User Guide.</p>
 <p>This website <a href="https://lisp-docs.github.io/cl-language-reference/" target="_blank" rel="noopener noreferrer">CL LISP Reference</a> is meant to be the reference.</p>
 <p>We will hopefully soon come up with a tutorials website and more!</p>
-<p>We aim to make this website as comprehensive as websites for other languages using <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a> as an example...</p>
+<p>We aim to make this website as comprehensive as websites for other languages.</p>
 <p>Adding some sample code below...</p>
 <div class="language-lisp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-lisp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">(</span><span class="token car">format</span><span class="token plain"> T </span><span class="token string" style="color:#e3116c">"Hello World!"</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <div class="language-lisp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-lisp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">(</span><span class="token defun keyword" style="color:#00009f">defun</span><span class="token defun"> </span><span class="token defun function" style="color:#d73a49">my-sqr</span><span class="token defun"> </span><span class="token defun punctuation" style="color:#393A34">(</span><span class="token defun arguments argument variable" style="color:#36acaa">x</span><span class="token defun punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">(</span><span class="token car">*</span><span class="token plain"> x x</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
+            <category>mission</category>
+            <category>beginning</category>
+        </item>
+        <item>
+            <title><![CDATA[Mission]]></title>
+            <link>https://lisp-docs.github.io/blog/2023/11/12/mission</link>
+            <guid>https://lisp-docs.github.io/blog/2023/11/12/mission</guid>
+            <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[The mission of Lisp Docs and this website in particular is to provide LISP Documentation.]]></description>
+            <content:encoded><![CDATA[<p>The mission of Lisp Docs and this website in particular is to provide LISP Documentation.</p>
+<p>The <a href="https://lisp-docs.github.io/docs/tutorial">Docs in this Website</a> are aimed to be a User Guide.</p>
+<p>The Docs</p>]]></content:encoded>
             <category>mission</category>
             <category>beginning</category>
         </item>

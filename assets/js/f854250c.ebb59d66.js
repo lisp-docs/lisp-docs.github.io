@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[859],{4028:s=>{s.exports=JSON.parse('{"label":"code-blocks","permalink":"/blog/tags/code-blocks","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

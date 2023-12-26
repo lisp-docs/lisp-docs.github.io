@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[1291],{135:s=>{s.exports=JSON.parse('{"permalink":"/blog/tags/glossary","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

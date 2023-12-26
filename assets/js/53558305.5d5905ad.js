@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[4864],{245:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/beginning","page":1,"postsPerPage":10,"totalPages":2,"totalCount":12,"nextPage":"/blog/tags/beginning/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

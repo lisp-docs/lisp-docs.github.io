@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklisp_docs_github_io=self.webpackChunklisp_docs_github_io||[]).push([[8132],{563:s=>{s.exports=JSON.parse('{"label":"tooltips","permalink":"/blog/tags/tooltips","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
