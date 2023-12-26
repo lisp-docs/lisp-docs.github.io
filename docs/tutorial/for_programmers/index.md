@@ -13,3 +13,5 @@ Alternatively to this tutorial, you can read for **free** any of the following b
 - [Practical Common Lisp](https://gigamonkeys.com/book/)
 - [Paradigms of Artificial Intelligence Programming](https://norvig.github.io/paip-lisp/#/)
   - Source and Code Source https://github.com/norvig/paip-lisp
+
+Here's a more exhaustive list of books for learning Common Lisp from [Cliki.net](https://cliki.net/Lisp%20books)
