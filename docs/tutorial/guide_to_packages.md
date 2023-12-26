@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # The Complete Idiot’s Guide to Common Lisp Packages
