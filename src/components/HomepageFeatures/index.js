@@ -11,7 +11,7 @@ import Link from "@docusaurus/Link";
 const FeatureList = [
   {
     title: "Lisp Tutorial",
-    link: "/docs/intro",
+    link: "/docs/tutorial",
     // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
