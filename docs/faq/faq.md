@@ -4,12 +4,12 @@
 This article is a stub. Please help contribute in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below
 :::
 
-## [General Common Lisp FAQ](./general-common-lisp-faq)
+## [General Common Lisp FAQ](/docs/faq/general-common-lisp-faq)
 
-## [Design and History FAQ](./design-and-history-faq)
+## [Design and History FAQ](/docs/faq/design-and-history-faq)
 
-## [Packages FAQ](./packages-faq)
+## [Packages FAQ](/docs/faq/packages-faq)
 
-## [Embedding FAQ](./embedding-faq)
+## [Embedding FAQ](/docs/faq/embedding-faq)
 
-## [Other FAQ](./other-faq)
+## [Other FAQ](/docs/faq/other-faq)
