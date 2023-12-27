@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Classes and Methods
 
-The Common LISP Object System.
+The Common Lisp Object System.
 
 ## Classes and Objects
 

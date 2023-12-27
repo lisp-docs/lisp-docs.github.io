@@ -9,11 +9,11 @@ authors:
 tags: [mission, beginning]
 ---
 
-The mission of Lisp Docs and this website in particular is to provide LISP Documentation.
+The mission of Common Lisp Docs and this website in particular is to provide Common Lisp Documentation.
 
 The Docs in this Website are aimed to be a User Guide.
 
-This website [CL LISP Reference](https://lisp-docs.github.io/cl-language-reference/) is meant to be the reference.
+This website [Common Lisp Reference](https://lisp-docs.github.io/cl-language-reference/) is meant to be the reference.
 
 We will hopefully soon come up with a tutorials website and more!
 
