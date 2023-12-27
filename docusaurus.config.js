@@ -73,6 +73,22 @@ const config = {
       metadata: [
         {name:"google-site-verification", content:"Vzaw013_bfdKeUVG89Ch3W1zC9_vH9ID2dPB9Dz0vr0"},
       ],
+      algolia: {
+        appId: "C1F2Q5VM6X",
+        apiKey: "43b7e710ac70357f752ad4ebea87c4d3",
+        indexName: "cl-language-reference--category-1-introduction",
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: "external\\.com|domain\\.com",
+        externalUrlRegex: "localhost|lisp-docs.github.io",
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        // replaceSearchResultPathname: {
+        //   from: "/docs/", // or as RegExp: /\/docs\//
+        //   to: "/",
+        // },
+      },
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
       image: 'img/1024px-Lisp_logo.svg.png',
