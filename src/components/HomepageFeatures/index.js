@@ -40,13 +40,13 @@ const FeatureList = [
     ),
   },
   {
-    title: "Lisp Standard",
-    link: "",
+    title: "Common Lisp ANSI Standard",
+    link: "https://github.com/lisp-docs/cl-standard/blob/master/new-spec/spec-source-pdf/cl-ansi-standard-draft-w-sidebar.pdf",
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        The original Lisp Standard Draft version, now freely available. This is
-        meant mainly for people who write Lisp Systems and Compilers. For the
+        The original Lisp Standard Draft dpANS3R+ version, now freely available. This is
+        meant mainly for people who write Common Lisp Systems and Compilers. For the
         Application Programmer please see the Technical Reference.{" "}
       </>
     ),
