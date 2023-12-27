@@ -212,10 +212,10 @@
             <link>https://lisp-docs.github.io/blog/mission</link>
             <guid>https://lisp-docs.github.io/blog/mission</guid>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[The mission of Lisp Docs and this website in particular is to provide LISP Documentation.]]></description>
-            <content:encoded><![CDATA[<p>The mission of Lisp Docs and this website in particular is to provide LISP Documentation.</p>
+            <description><![CDATA[The mission of Common Lisp Docs and this website in particular is to provide Common Lisp Documentation.]]></description>
+            <content:encoded><![CDATA[<p>The mission of Common Lisp Docs and this website in particular is to provide Common Lisp Documentation.</p>
 <p>The Docs in this Website are aimed to be a User Guide.</p>
-<p>This website <a href="https://lisp-docs.github.io/cl-language-reference/" target="_blank" rel="noopener noreferrer">CL LISP Reference</a> is meant to be the reference.</p>
+<p>This website <a href="https://lisp-docs.github.io/cl-language-reference/" target="_blank" rel="noopener noreferrer">Common Lisp Reference</a> is meant to be the reference.</p>
 <p>We will hopefully soon come up with a tutorials website and more!</p>
 <p>We aim to make this website as comprehensive as websites for other languages.</p>
 <p>Adding some sample code below...</p>
@@ -229,10 +229,9 @@
             <link>https://lisp-docs.github.io/blog/2023/11/12/mission</link>
             <guid>https://lisp-docs.github.io/blog/2023/11/12/mission</guid>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[The mission of Lisp Docs and this website in particular is to provide LISP Documentation.]]></description>
-            <content:encoded><![CDATA[<p>The mission of Lisp Docs and this website in particular is to provide LISP Documentation.</p>
-<p>The <a href="https://lisp-docs.github.io/docs/tutorial">Docs in this Website</a> are aimed to be a User Guide.</p>
-<p>The Docs</p>]]></content:encoded>
+            <description><![CDATA[The mission of Lisp Docs and this website in particular is to provide Common Lisp Documentation.]]></description>
+            <content:encoded><![CDATA[<p>The mission of Lisp Docs and this website in particular is to provide Common Lisp Documentation.</p>
+<p>The <a href="https://lisp-docs.github.io/docs/tutorial">Docs in this Website</a> are aimed to be a User Guide.</p>]]></content:encoded>
             <category>mission</category>
             <category>beginning</category>
         </item>
