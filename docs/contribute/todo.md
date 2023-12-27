@@ -21,7 +21,6 @@ We need help writing any of these sections:
 - [Getting Started](/docs/getting-started) pages
 - [FAQs](/docs/faq)
 - [Why Lisp](/docs/whylisp) pages for beginners and CTOs.
-- Add Technical Reference Search from the main page
 
 
 ## Done
