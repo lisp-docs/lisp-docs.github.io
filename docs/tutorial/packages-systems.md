@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 ---
 
 # Packages and Systems
@@ -12,19 +12,19 @@ sidebar_position: 6
 
 ## Structure
 
-Common Lisp's terminology for various parts of projects is often confusing to new people because it's old and uses a lot of words that we use now (like “package”) to mean subtly different things than people mean today. Things get easier once you internalize what Common Lisp means by the terms.
+Common Lisp's terminology for various parts of projects is often confusing to new people because it's old and uses a lot of words that we use now (like <GlossaryTerm term={"package"}><i>[“package”](https://lisp-docs.github.io/cl-language-reference/chap-11/bb-b-package-concepts)</i></GlossaryTerm>) to mean subtly different things than people mean today. Things get easier once you internalize what Common Lisp means by the terms.
 
 ## Packages
 
 We often see questions in IRC and Discord that look something like: "How do I export a class from a package"? Questions worded like this are a sign of a very common misunderstanding about what packages in Common Lisp *actually are*.
 
-**A package in Common Lisp is a container for symbols.** That's it. They're a way to group related names (symbols) together so you don't have to do the miserable prefixing of every name with `mylibrary-...` like you need to do in Emacs Lisp or C to avoid name clashes.
+**A package in Common Lisp is a container for symbols.** That's it. They're a way to group related names (<GlossaryTerm term={"symbol"}><DictionaryLink term={"symbol"}><b>symbols</b></DictionaryLink></GlossaryTerm>) together so you don't have to do the miserable prefixing of every name with `mylibrary-...` like you need to do in Emacs Lisp or C to avoid name clashes.
 
-You don't export a class from a package, you export a symbol. You don't import a function, you import the symbol it's attached to. This sounds pedantic, but is important to keep clear in your head as you start using the package system. If you're not clear on what exactly a symbol is, I wrote a [separate post](https://stevelosh.com/blog/2016/06/symbolic-computation/) just about symbols which you might find helpful.
+You don't export a class from a package, you export a <GlossaryTerm term={"symbol"}><DictionaryLink term={"symbol"}><b>symbol</b></DictionaryLink></GlossaryTerm>. You don't import a function, you import the symbol it's attached to. This sounds pedantic, but is important to keep clear in your head as you start using the package system. If you're not clear on what exactly a symbol is, I wrote a [separate post](https://stevelosh.com/blog/2016/06/symbolic-computation/) just about symbols which you might find helpful.
 
 Another major tripping point for new people is the relationship between packages and files. Or, rather: the completely lack of any relationship in Common Lisp.
 
-In many languages like Python, Java, or Clojure, a file's package and its location on the hard drive are tied together. For example: when you say import `foo.bar.baz` in Python, Python will look for a `baz.py` file inside the foo/bar/ directory (it's a little more complicated than this, but that doesn't matter for this example).
+In many languages like Python, Java, or Clojure, a file's package and its location on the hard drive are tied together. For example: when you say import `foo.bar.baz` in Python, Python will look for a `baz.py` file inside the `foo/bar/` directory (it's a little more complicated than this, but that doesn't matter for this example).
 
 In Common Lisp, this is not the case. **Files and packages are completely unrelated in Common Lisp.** You can have many files that all work in the same package, or one file that switches between many packages, or even create or modify packages at runtime.
 
@@ -92,10 +92,10 @@ Unlike ASDF, Quicklisp is relatively new in the Common Lisp world (it's only abo
 
 Here's a quick recap of the different layers of project structure you'll encounter in Common Lisp. Jot these down on a post it note you can refer to as you're learning.
 
-Files are files on your hard drive.
-Packages are containers of symbols. They are orthogonal to files.
-Systems are collections of code, instructions on how to load that code, dependency lists, and metadata. They are orthogonal to packages.
-Projects are high-level collections of... "stuff" such as code, documentation, maybe some image assets, etc. They are (mostly) orthogonal to systems (are you seeing a trend here?).
-Common Lisp itself knows about files and packages.
-ASDF adds systems.
-Quicklisp adds the internet.
+- **Files** are files on your hard drive.
+- **Packages** are containers of symbols. They are orthogonal to files.
+- **Systems** are collections of code, instructions on how to load that code, dependency lists, and metadata. They are orthogonal to packages.
+- **Projects** are high-level collections of... "stuff" such as code, documentation, maybe some image assets, etc. They are (mostly) orthogonal to systems (are you seeing a trend here?).
+- Common Lisp itself knows about files and packages.
+- ASDF adds systems.
+- Quicklisp adds the internet.
