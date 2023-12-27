@@ -20,3 +20,16 @@ This article is a stub. Please help contribute in [our repository](https://githu
 
 
 <!-- Need to populate this. Probably similarly to https://docs.python.org/3/tutorial/index.html but for CL... -->
+
+<!-- 
+
+TODO
+https://github.com/rabbibotton/clog/blob/main/LEARN.md
+https://stevelosh.com/blog/2018/08/a-road-to-common-lisp/
+? http://lisp.plasticki.com/show?14F
+https://cliki.net/Document
+https://cliki.net/Getting%20Started
+https://llthw.common-lisp.dev/
+https://www.reddit.com/r/lisp/comments/yyoswo/common_lisp_playground/
+
+ -->

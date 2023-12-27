@@ -5,8 +5,11 @@ The goal of this tutorial is to teach the concepts clearly with tons of examples
 The main concepts to learn for C, Java, or Python Programmers are:
 
 - Symbols
-- Packages
+- The Package System
 - The CL Object System
+- Macros
+- The Condition System
+- Use of First Class Functions
 
 Alternatively to this tutorial, you can read for **free** any of the following books:
 
