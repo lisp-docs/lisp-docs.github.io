@@ -137,7 +137,7 @@ const config = {
               },
               {
                 label: 'Help',
-                to: '/help',
+                to: '/docs/help',
               }
             ],
           },
@@ -178,11 +178,11 @@ const config = {
           {
             title: 'Common Lisp Docs',
             items: [
-              {label: 'About', to: '/about'},
-              {label: 'Why Lisp', to: '/about'},
-              {label: 'Getting Started', to: '/about'},
+              {label: 'About', to: '/docs/about'},
+              {label: 'Why Lisp', to: '/docs/about'},
+              {label: 'Getting Started', to: '/docs/about'},
               {label: 'FAQ', to: '/docs/faq'},
-              {label: 'Getting Help', to: '/help'},
+              {label: 'Getting Help', to: '/docs/help'},
               {label: 'How and What to Contribute', to: '/docs/contribute'},
             ],
           },
