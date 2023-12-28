@@ -111,8 +111,8 @@ const config = {
           { to: "/docs/contribute", label: "Contribute!", position: "right" },
           // {to: '/contribue', label: 'Contribute!', position: 'left'},
           {to: '/docs/faq', label: 'FAQ', position: 'right'},
-          {to: '/help', label: 'Getting Help', position: 'right'},
-          {to: '/about', label: 'About', position: 'right'},
+          {to: '/docs/help', label: 'Getting Help', position: 'right'},
+          {to: '/docs/about', label: 'About', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
           {
             href: 'https://github.com/lisp-docs/lisp-docs.github.io',
