@@ -30,7 +30,7 @@ The purpose of the reference is both to **learn** and **review** in detail **all
 
 ### What, Why and for Whom is a Language Specification?
 
-A Language Specification is a **consice**, **precise**, and **accurate** **description** of **what** the aspects of a language are.
+A Language Specification is a **concise**, **precise**, and **accurate** **description** of **what** the aspects of a language are.
 
 The target audence is mainly for **language implementers** to have a clear writing of what the aspects of the language are.
 
