@@ -128,12 +128,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Common Lisp Tutorial',
                 to: '/docs/tutorial',
               },
               {
-                label: 'Cl Technical Reference',
-                to: 'https://github.com/lisp-docs/cl-language-reference/',
+                label: 'Common Lisp Technical Reference',
+                to: 'https://lisp-docs.github.io/cl-language-reference/',
               },
               {
                 label: 'Help',
@@ -170,8 +170,12 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
+                label: 'Tutorial and General Content GitHub',
                 href: 'https://github.com/lisp-docs/lisp-docs.github.io',
+              },
+              {
+                label: 'Technical Reference GitHub',
+                href: 'https://github.com/lisp-docs/cl-language-reference/',
               },
               {label: 'Contribute to the Docs', to: '/docs/contribute'},
             ],
