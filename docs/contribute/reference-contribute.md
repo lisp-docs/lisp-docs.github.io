@@ -6,7 +6,9 @@ sidebar_position: 2
 
 ## How To Contribute
 
-Please just do a regular contribution on our [GitHub Repository](https://github.com/lisp-docs/cl-language-reference). 
+Please just do a regular contribution on our [GitHub Repository](https://github.com/lisp-docs/cl-language-reference).
+
+Please note that this is a **different repository** than the tutorial repository.
 
 ## Contribution Workflow
 

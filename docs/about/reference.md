@@ -74,9 +74,9 @@ There have been quite a few Language Specification projects. Their goals usually
   - > After I started this project, someone pointed me to the NovaSpec, which is a nice rendering, much more complete than this, and improving a lot on the CLHS in my opinion.
 - [NovaSpec](https://novaspec.org/cl/). See below for notes.
 
-#### A Note on **NovaSpec**
+### A Note on **NovaSpec**
 
-The purpose of NovaSpec as a specification is again for language implementers. It is **not** for people learning Common Lisp. Before working on most of the Technical Reference I spoke with Gilbert Baumann, the author of NovaSpec, to see if our goals aligned and we should just work together. However that is not the case and in fact **we need both projects**. NovaSpec is for compiler/implementation writers to have a better specification. There are **errors** and **problems** with the final official ANSI Standard. Yes, you read correctly. There are sometimes errors in examples, typos, changes in some sections that were agreeed upon were not propagated throughout the entire specification, and other issues.
+The purpose of NovaSpec as a specification is again for language implementers. It is **not** for people learning Common Lisp. Before working on most of the Technical Reference I spoke with Gilbert Baumann, the author of NovaSpec, to see if our goals aligned and we should just work together. However that is not the case and in fact **we need both projects**. NovaSpec is for compiler/implementation writers to have a better specification. There are **errors** and **problems** with the final official ANSI Standard. Yes, you read correctly. There are sometimes errors in examples, there are typos, changes to some sections that were agreeed upon but were not propagated throughout the entire specification cause discrepancies, and there  are other issues as well.
 
 The NovaSpec project is mainly to fix many of those issues by providing **annotations** to the specification, much in the way as they are in this [sample page](http://bauhh.dyndns.org:8000/clim-spec/G.html#_1992) for CLIM.
 
