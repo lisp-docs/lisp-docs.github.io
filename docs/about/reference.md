@@ -22,7 +22,7 @@ Features of the Reference:
 
 ### What, Why and for Whom is a Technical Reference?
 
-A Technical Reference is a document **explaining** the aspects of tha language, the **consequences** of those aspects, sometimes the **reasoning** behind them, and **examples** of usage.
+A Technical Reference is a document **explaining** the aspects of the language, the **consequences** of those aspects, sometimes the **reasoning** behind them, and **examples** of usage.
 
 The target audience for a Technical Reference are the **users** of the language i.e. people who are programming in Common Lisp.
 
