@@ -5,12 +5,20 @@ Here we will list all the To Do items we have for this project, and you can help
 
 ## Technical Reference
 
+### Formatting To Dos
+
 - We need to format al the Tables to markdown.
-- **Examples**: We need expanded examples and **Explanations** for most of the content in the reference.
-- Please take a look at the [Dictionary Items To Do's](/docs/contribute) in particular
 - Update lisp code to be wrapped in code blocks to be formated with markdown. Markdown supports math formulas and special text, checkout the [Markdown Syntax](https://commonmark.org/help/) tutorial for how to do it. Note that we use [MDX](https://docusaurus.io/docs/markdown-features) instead of vanilla markdown.
   - **2023/12/06 Update:** All the dictionary pages example sections were surrounded with code blocks for syntax highlighting, so therefore most of what's left are the code blocks in the write up sections of the reference.
 - Links to Sections like in See Also "Section 6.1.1.7 (Destructuring) "
+- Some Pages have new lines in the middle of parragraphs that need to be removed.
+- Rename files to have numbers in them?
+- Sometimes page header strings (chapter titles) with new lines were added in some parts of the text, they need to be removed... They can probably be removed programmatically...
+
+### Content To Dos
+
+- **Examples**: We need expanded examples and **Explanations** for most of the content in the reference.
+- Please take a look at the [Dictionary Items To Do's](/docs/contribute) in particular
 - https://www.cliki.net/ANSI%20Clarifications%20and%20Errata
 - https://www.lispworks.com/documentation/HyperSpec/Issues/I_Alpha.htm
 
