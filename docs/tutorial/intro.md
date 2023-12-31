@@ -34,5 +34,5 @@ https://cliki.net/Document
 https://cliki.net/Getting%20Started
 https://llthw.common-lisp.dev/
 https://www.reddit.com/r/lisp/comments/yyoswo/common_lisp_playground/
-
+https://github.com/ashok-khanna/lisp-notes
  -->
