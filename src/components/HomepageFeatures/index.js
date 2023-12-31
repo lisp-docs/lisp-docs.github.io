@@ -33,7 +33,7 @@ const FeatureList = [
   },
   {
     title: "How To Guides",
-    link: "",
+    link: "/docs/howto",
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>Follow hands-on guides on how to use Common Lisp for what you need.</>
