@@ -9,6 +9,8 @@ The goal of the tutorial is to provide an example drive explanation of the langu
 
 So far the only sections of the tutorial written are those on:
 
+- [Recommended Books for Begineers](/docs/tutorial/for_beginners/)
+- [Recommended Reading for Experienced Programmers](/docs/tutorial/for_programmers/)
 - [Macros](/docs/tutorial/macros)
 - [Long Tutorial on Packages](/docs/tutorial/guide_to_packages)
 - [Short Guide to Packages](/docs/tutorial/packages-systems)
