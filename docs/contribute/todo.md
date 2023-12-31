@@ -7,13 +7,40 @@ Here we will list all the To Do items we have for this project, and you can help
 
 ### Formatting To Dos
 
+#### Tables
+
 - We need to format al the Tables to markdown.
+  - This can probably be done programmatically for the most part
+  - Most tables are preformatted an follow a similar pattern
+  - Can check if it's a listing of dictionary items with a script similar to [this one](https://github.com/lisp-docs/process-dpans3r/blob/master/add-cl-links.py) and if every item is a dictionary item, add the `<DictionaryLink>item</DictionaryLink>` wrapping to it and the link should just work
+  - Need to figure out the styling to keep them to new lines, or maybe remove the `<p></p>` tags all together.
+  - Most tables are either listings of dictionary items, or code blocks. Can then check what the rest of the tables are and how many are left to format to see if it makes sense to do a programmatic or manual approach to fixing them
+
+#### Code Blocks
+
 - Update lisp code to be wrapped in code blocks to be formated with markdown. Markdown supports math formulas and special text, checkout the [Markdown Syntax](https://commonmark.org/help/) tutorial for how to do it. Note that we use [MDX](https://docusaurus.io/docs/markdown-features) instead of vanilla markdown.
   - **2023/12/06 Update:** All the dictionary pages example sections were surrounded with code blocks for syntax highlighting, so therefore most of what's left are the code blocks in the write up sections of the reference.
+
+#### Links
+
 - Links to Sections like in See Also "Section 6.1.1.7 (Destructuring) "
-- Some Pages have new lines in the middle of parragraphs that need to be removed.
-- Rename files to have numbers in them?
+  - These can be done programmatically as well, just have to map to the right page and to the right id
+  - there's a script that does the mapping here: [process-dpans3r](https://github.com/lisp-docs/process-dpans3r/tree/master) I just forgot the name, it's the one that calls the python function `ord`
+  - See how the id's are mapped by just navigating to any subsection in a reference page...
+
+#### Extra New Lines
+
+- Some Pages have new lines in the middle of parragraphs that need to be removed
+
+#### File Names
+
+- Rename files to have numbers in them? This can make it easier to find the right file for edditing. Careful not to chage the react component names however, that was the original reason everything was changed...
+
+#### Extra Page Headers in Text
+
 - Sometimes page header strings (chapter titles) with new lines were added in some parts of the text, they need to be removed... They can probably be removed programmatically...
+  - Get the name of all the chapters. Then look for the string `r'\s\n\s{chapter_name}\s\n\s'` and delete it (AKA replace it with them empty string)
+  - Manually check all deletions in your git diff tool to make sure they make sense and something valuable is not being deleted
 
 ### Content To Dos
 
