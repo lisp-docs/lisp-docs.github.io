@@ -60,7 +60,7 @@ There is only **one** [Technical Reference](https://lisp-docs.github.io/cl-langu
 
 ### Language Specification Projects
 
-First a note on copyright: The official standard specification is **copyrighted** by **ANSI** and therefore it is illegal to reproduce without permission. The [CL Hyperspec](https://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm) is the **only** rendering there is based on this document besides ordering a paper copy from ANSI. Take a look at their [authorship note](https://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Authorship).
+First a note on copyright: The official standard specification is **copyrighted** by **ANSI** and therefore it is illegal to reproduce without permission. The [CL Hyperspec (CLHS)](https://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm) and [Franz Inc's Allegro CL Docs](https://franz.com/support/documentation/11.0/ansicl/ansicl.htm) are one of the few renderings based on this document besides ordering a paper copy from ANSI. Take a look at the CLHS [authorship note](https://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Authorship).
 
 However, before the final version of the standard specification was agreed upon, a **draft** was published which became part of the **Public Domain**. Therefore anyone is free to use that version of the draft for whatever they want. All projects besides those with explicit copyright permission (the CL HyperSpec and Franz Inc. Allegro CL among them) are based on previous draft versions. There are drafts dpANS1, dpANS2, dpANS3, dpANS3R, dpANS3R+.
 
