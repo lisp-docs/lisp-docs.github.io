@@ -9,7 +9,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Common Lisp Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.3dbc9d10.css">
-<script src="/assets/js/runtime~main.0b6c16d5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1530e9f9.js" defer="defer"></script>
 <script src="/assets/js/main.5b6560d3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -17,17 +17,52 @@
 <p>Here we will list all the To Do items we have for this project, and you can help by taking care of any of them <!-- -->:D<!-- -->.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="technical-reference">Technical Reference<a href="#technical-reference" class="hash-link" aria-label="Direct link to Technical Reference" title="Direct link to Technical Reference">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="formatting-to-dos">Formatting To Dos<a href="#formatting-to-dos" class="hash-link" aria-label="Direct link to Formatting To Dos" title="Direct link to Formatting To Dos">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tables">Tables<a href="#tables" class="hash-link" aria-label="Direct link to Tables" title="Direct link to Tables">​</a></h4>
 <ul>
-<li>We need to format al the Tables to markdown.</li>
+<li>We need to format al the Tables to markdown.<!-- -->
+<ul>
+<li>This can probably be done programmatically for the most part</li>
+<li>Most tables are preformatted an follow a similar pattern</li>
+<li>Can check if it&#x27;s a listing of dictionary items with a script similar to <a href="https://github.com/lisp-docs/process-dpans3r/blob/master/add-cl-links.py" target="_blank" rel="noopener noreferrer">this one</a> and if every item is a dictionary item, add the <code>&lt;DictionaryLink&gt;item&lt;/DictionaryLink&gt;</code> wrapping to it and the link should just work</li>
+<li>Need to figure out the styling to keep them to new lines, or maybe remove the <code>&lt;p&gt;&lt;/p&gt;</code> tags all together.</li>
+<li>Most tables are either listings of dictionary items, or code blocks. Can then check what the rest of the tables are and how many are left to format to see if it makes sense to do a programmatic or manual approach to fixing them</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="code-blocks">Code Blocks<a href="#code-blocks" class="hash-link" aria-label="Direct link to Code Blocks" title="Direct link to Code Blocks">​</a></h4>
+<ul>
 <li>Update lisp code to be wrapped in code blocks to be formated with markdown. Markdown supports math formulas and special text, checkout the <a href="https://commonmark.org/help/" target="_blank" rel="noopener noreferrer">Markdown Syntax</a> tutorial for how to do it. Note that we use <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">MDX</a> instead of vanilla markdown.<!-- -->
 <ul>
 <li><strong>2023/12/06 Update:</strong> All the dictionary pages example sections were surrounded with code blocks for syntax highlighting, so therefore most of what&#x27;s left are the code blocks in the write up sections of the reference.</li>
 </ul>
 </li>
-<li>Links to Sections like in See Also &quot;Section 6.1.1.7 (Destructuring) &quot;</li>
-<li>Some Pages have new lines in the middle of parragraphs that need to be removed.</li>
-<li>Rename files to have numbers in them?</li>
-<li>Sometimes page header strings (chapter titles) with new lines were added in some parts of the text, they need to be removed... They can probably be removed programmatically...</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="links">Links<a href="#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links">​</a></h4>
+<ul>
+<li>Links to Sections like in See Also &quot;Section 6.1.1.7 (Destructuring) &quot;<!-- -->
+<ul>
+<li>These can be done programmatically as well, just have to map to the right page and to the right id</li>
+<li>there&#x27;s a script that does the mapping here: <a href="https://github.com/lisp-docs/process-dpans3r/tree/master" target="_blank" rel="noopener noreferrer">process-dpans3r</a> I just forgot the name, it&#x27;s the one that calls the python function <code>ord</code></li>
+<li>See how the id&#x27;s are mapped by just navigating to any subsection in a reference page...</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="extra-new-lines">Extra New Lines<a href="#extra-new-lines" class="hash-link" aria-label="Direct link to Extra New Lines" title="Direct link to Extra New Lines">​</a></h4>
+<ul>
+<li>Some Pages have new lines in the middle of parragraphs that need to be removed</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="file-names">File Names<a href="#file-names" class="hash-link" aria-label="Direct link to File Names" title="Direct link to File Names">​</a></h4>
+<ul>
+<li>Rename files to have numbers in them? This can make it easier to find the right file for edditing. Careful not to chage the react component names however, that was the original reason everything was changed...</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="extra-page-headers-in-text">Extra Page Headers in Text<a href="#extra-page-headers-in-text" class="hash-link" aria-label="Direct link to Extra Page Headers in Text" title="Direct link to Extra Page Headers in Text">​</a></h4>
+<ul>
+<li>Sometimes page header strings (chapter titles) with new lines were added in some parts of the text, they need to be removed... They can probably be removed programmatically...<!-- -->
+<ul>
+<li>Get the name of all the chapters. Then look for the string <code>r&#x27;\s\n\s{chapter_name}\s\n\s&#x27;</code> and delete it (AKA replace it with them empty string)</li>
+<li>Manually check all deletions in your git diff tool to make sure they make sense and something valuable is not being deleted</li>
+</ul>
+</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="content-to-dos">Content To Dos<a href="#content-to-dos" class="hash-link" aria-label="Direct link to Content To Dos" title="Direct link to Content To Dos">​</a></h3>
 <ul>
