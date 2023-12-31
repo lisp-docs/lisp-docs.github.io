@@ -17,4 +17,9 @@ Alternatively to this tutorial, you can read for **free** any of the following b
 - [Paradigms of Artificial Intelligence Programming](https://norvig.github.io/paip-lisp/#/)
   - Source and Code Source https://github.com/norvig/paip-lisp
 
+For learning about the Common Lisp Object System (not exactly the same object oriented ideas in Java) this book is recommended:
+
+- Object-Oriented Programming in Common Lisp, by Sonya E. Keene. Addison Wesley
+  - I couldn't find a link with a copyright notice with permission to share. However, I recommend doing a [search on Google](https://www.google.com/search?q=+Sonya+E.+Keene%2C+Object-Oriented+Programming+in+Common+Lisp%2C+Addison+Wesley#ip=1) to find available print and digital copies...
+
 Here's a more exhaustive list of books for learning Common Lisp from [Cliki.net](https://cliki.net/Lisp%20books)
