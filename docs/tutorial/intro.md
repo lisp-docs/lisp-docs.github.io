@@ -9,8 +9,9 @@ The goal of the tutorial is to provide an example drive explanation of the langu
 
 So far the only sections of the tutorial written are those on:
 
-- [Macros](/docs/tutorial/macros.md)
-- [Packages](/docs/tutorial/guide_to_packages.md)
+- [Macros](/docs/tutorial/macros)
+- [Long Tutorial on Packages](/docs/tutorial/guide_to_packages)
+- [Short Guide to Packages](/docs/tutorial/packages-systems)
 
 Please help us write this tutorial! You can even contribute content from the Public Domain or with Copyright permissions.
 

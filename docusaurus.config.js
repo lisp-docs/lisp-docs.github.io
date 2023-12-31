@@ -115,6 +115,7 @@ const config = {
           },
           // {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
           { to: "/docs/whylisp", label: "Why Lisp?", position: "left" },
+          { to: "/docs/howto", label: "Guides", position: "left" },
 
           { to: "/docs/contribute", label: "Contribute!", position: "right" },
           // {to: '/docs/faq', label: 'FAQ', position: 'right'},
@@ -195,6 +196,7 @@ const config = {
               { label: "Getting Started", to: "/docs/getting-started" },
               { label: "FAQ", to: "/docs/faq" },
               { label: "Getting Help", to: "/docs/help" },
+              { label: "How To Guides", to: "/docs/howto" },
             ],
           },
         ],
