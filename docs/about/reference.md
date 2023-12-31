@@ -7,10 +7,12 @@ The point of the technical reference is to provide documentation to both learn a
 
 Features of the Reference:
 
-- Additional explanations to the specification
-- Additional examples to the specification
-- Fixes to mistakes in the specification
-- It has a modern rendering of the ANSI dpANS3R+ specification featuring.
+- Additional explanations to the standard specification
+- Additional examples to the standard specification
+- Fixes to mistakes in the standard specification
+- It has a modern rendering of the ANSI dpANS3R+ standard draft specification
+  - dpANS3R+ being the dpANS3 with the dpANS3R changes applied to it.
+  - See the [source repo here](https://github.com/lisp-docs/cl-standard/tree/master/dpANS3R%2B)
 - Glossary definition tooltips to make it easier to read.
 - Code Blocks with Syntax Highlighting
 - Github repo where anyone can contribute
