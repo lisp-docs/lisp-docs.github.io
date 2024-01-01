@@ -47,6 +47,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
+          showLastUpdateAuthor: true,
           // rehypePlugins: [
           //   [remarkTok, {strict: false}],
           // ],
