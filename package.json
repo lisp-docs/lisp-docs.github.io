@@ -1,6 +1,7 @@
 {
   "name": "lisp-docs-github-io",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "license": "MIT License",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
