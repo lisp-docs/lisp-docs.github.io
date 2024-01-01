@@ -9,7 +9,15 @@ Features of the Reference:
 
 - Additional explanations to the standard specification
 - Additional examples to the standard specification
+- Functional examples with context to understand how a given operator is used with the rest of Common Lisp
+  - This can be useful for learning how things in Common Lisp combine to deliver functionality
 - Fixes to mistakes in the standard specification
+- For a given operator:
+  - What conditions are signaled?
+  - What is considered undefined behavior?
+  - How do different implementations deal with undefined behavior?
+  - What is the normal way of using an operator?
+  - When is using an operator over another preferred when the same task can be accomplished with either of them?
 - It has a modern rendering of the ANSI dpANS3R+ standard draft specification
   - dpANS3R+ being the dpANS3 with the dpANS3R changes applied to it.
   - See the [source repo here](https://github.com/lisp-docs/cl-standard/tree/master/dpANS3R%2B)
