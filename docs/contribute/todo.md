@@ -58,6 +58,9 @@ We need help writing any of these sections:
 - [Getting Started](/docs/getting-started) pages
 - [FAQs](/docs/faq)
 - [Why Lisp](/docs/whylisp) pages for beginners and CTOs.
+- Finish tutorial on Structuring Large Projects both for package inferred and regular
+- Add the Technical Reference and Tutorials to https://github.com/CodyReichert/awesome-cl?tab=readme-ov-file#reference and https://github.com/CodyReichert/awesome-cl?tab=readme-ov-file#reference
+- solve google crawler indexing issue
 
 
 ## Done

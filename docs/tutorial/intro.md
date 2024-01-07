@@ -12,8 +12,9 @@ So far the only sections of the tutorial written are those on:
 - [Recommended Books for Begineers](/docs/tutorial/for_beginners/)
 - [Recommended Reading for Experienced Programmers](/docs/tutorial/for_programmers/)
 - [Macros](/docs/tutorial/macros)
-- [Long Tutorial on Packages](/docs/tutorial/guide_to_packages)
-- [Short Guide to Packages](/docs/tutorial/packages-systems)
+- [Long Tutorial on Packages](/docs/tutorial/projects/guide_to_packages)
+- [Short Guide to Packages](/docs/tutorial/projects/packages-systems)
+- [Tutorial on Structuring Projects](/docs/tutorial/projects/)
 
 Please help us write this tutorial! You can even contribute content from the Public Domain or with Copyright permissions.
 
