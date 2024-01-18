@@ -49,6 +49,15 @@ Here we will list all the To Do items we have for this project, and you can help
 - https://www.cliki.net/ANSI%20Clarifications%20and%20Errata
 - https://www.lispworks.com/documentation/HyperSpec/Issues/I_Alpha.htm
 
+### New Sections
+
+Can you think of important topics to cover in the technical reference besides those that are in the specification and mop chapters 5 and 6? Or anything we have not yet covered? If so, please [submit an issue](https://github.com/lisp-docs/cl-language-reference/issues) or even better a pull request.
+
+- Concurrency is probably essential, so the bordeaux and maybe another library related to that
+- A lot of the trivial-* packages are probably also essential at this stage to programming in CL and they are independent (mostly) of the implementations, so it may make sense to include them
+- A table comparisons of the implementations, but then we would have to think what the relevant comparisons are. Any important comparisons between the implementations that are really important to know?
+  - A table of trivial-* to implementation support is important
+
 ## Tutorial
 
 We need help writing any of these sections:
