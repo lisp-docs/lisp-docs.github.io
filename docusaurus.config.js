@@ -52,7 +52,7 @@ const config = {
           //   [remarkTok, {strict: false}],
           // ],
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/lisp-docs/lisp-docs.github.io/tree/main/",
         },
         blog: {
           showReadingTime: true,
