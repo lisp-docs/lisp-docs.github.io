@@ -5,7 +5,7 @@ slug: /tutorial
 
 # Tutorial Introduction
 
-The goal of the tutorial is to provide an example drive explanation of the language to hit the ground running quickly. The [Technical Reference](https://lisp-docs.github.io/cl-language-reference/) should be reviewed for a more definite and technically correct explanation of any concept, symbol, operator, or facet of the language. Additionally we have a list of recommended books for both [beginner programmers](/docs/tutorial/for_beginners/) and [experienced programmers](/docs/tutorial/for_programmers/).
+The goal of the tutorial is to provide an example driven explanation of the language to hit the ground running quickly. The [Technical Reference](https://lisp-docs.github.io/cl-language-reference/) should be reviewed for a more definite and technically correct explanation of any concept, symbol, operator, or facet of the language. Additionally we have a list of recommended books for both [beginner programmers](/docs/tutorial/for_beginners/) and [experienced programmers](/docs/tutorial/for_programmers/).
 
 So far the only sections of the tutorial written are those on:
 
