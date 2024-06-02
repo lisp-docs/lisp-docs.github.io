@@ -62,7 +62,7 @@ export default function Home() {
         <HomepageFeatures />
         <hr />
         <div className="text--center padding-horiz--md margin-bottom--lg">
-          <Heading as="h1">About The Tehcnical Reference</Heading>
+          <Heading as="h1">About The Technical Reference</Heading>
           {/* {description} */}
         </div>
         {/* <h1>The Tehcnical Reference</h1> */}
