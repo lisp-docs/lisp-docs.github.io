@@ -7,4 +7,4 @@ Why to use Common Lisp may be different depending on what you are looking for. H
 
 - [Why Common Lisp for Professional Software Developers?](/docs/whylisp/whylispdevelopers)
 - [Why Common Lisp for CTOs and Project Managers?](/docs/whylisp/whylispctos)
-- [Why Common Lisp for Begineers?](/docs/whylisp/whylispbeginners)
+- [Why Common Lisp for Beginners?](/docs/whylisp/whylispbeginners)
