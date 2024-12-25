@@ -254,7 +254,7 @@ The `handler-case` macro is used to handle specific types of conditions. Its syn
       0)))
 
 (print (safe-divide 10 2))  ; Prints 5
-(print (safe-divide 10 0))  ; Prints "Caught division by zero: #<DIVISION-BY-ZERO ...>" and then 0
+(print (safe-divide 10 0))  ; Prints "Cau< division by zero>lt;DIVISION-BY`-ZERO ...>"` and then `0
 ```
 
 In this example, `handler-case` attempts to evaluate `(/ x y)`. If a `division-by-zero` condition is signaled, the handler associated with `division-by-zero` is executed. The condition object is bound to the variable `c`, and the handler prints a message and returns 0. If no `division-by-zero` is signaled, the division result is returned.
@@ -273,7 +273,7 @@ You can also use `otherwise` clause that acts like a default case if no other ha
 
 (process-input "123") ; parses the integer 123
 (process-input "abc") ; prints "Invalid input: abc" and returns nil
-(process-input '(1 2 3)) ; prints "An unexpected error occurred: #<TYPE-ERROR ...>" and returns nil
+(process-input '(1 2 3)) ; print<An unexpected error occurre><TYPE-`ERROR ...>"` and returns ni`l
 ```
 
 ### 3.2 `handler-bind`: Dynamically Binding Handlers
@@ -301,7 +301,7 @@ The `handler-bind` macro allows you to dynamically bind handlers for specific co
     (/ 10 0)
     (print "This will not be printed.")))
 
-(print (my-function)) ; Prints "Handling division by zero in my-function: #<DIVISION-BY-ZERO ...>" and then 0
+(print (my-function)) ; Prints "Handling division by zero i<y-function: #>DIVISION-BY-`ZERO ...>" and` then `0
 ```
 
 In this example, `handler-bind` binds a handler for `division-by-zero` within the `my-function` function. If a `division-by-zero` condition is signaled, the handler function is called, which prints a message and then uses `return-from` to return 0 from `my-function`.
@@ -332,7 +332,7 @@ If `expression` signals an error, `ignore-errors` catches the error and returns 
       (format t "The result is: ~a~%" result)))
 ```
 
-This will first print "An error occurred: #<DIVISION-BY-ZERO ...>" and then "The result is: 5".
+This will first print `"An error occurred: #<DIVISION-BY-ZERO ...>"` and then `"The result is: 5"`.
 
 `ignore-errors` should be used with caution, as it can mask important errors and make debugging more difficult. It's best used in situations where you expect errors to occur occasionally and want to handle them gracefully without interrupting the program's main flow.
 
@@ -502,7 +502,7 @@ Division by zero.
 
 Restarts:
  0: [RETURN-ONE] Returning 1 instead of dividing by zero.
- 1: [USE-NEW-DIVISOR] Use new divisor.
+ 1: [USE-NEW-DIVISOR] Use new divi<
  2: [ABORT] Return to top level.
 
 Debug>
@@ -532,7 +532,7 @@ X cannot be negative
    [Condition of type SIMPLE-ERROR]
 
 Restarts:
- 0: [CONTINUE] Use the absolute value.
+ 0: [CONTINUE] Use the absolute va<
  1: [ABORT] Return to top level.
 
 Debug>
