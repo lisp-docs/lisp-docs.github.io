@@ -44,6 +44,8 @@ This tutorial will introduce you to some of the most popular and actively mainta
 **3. Package Managers:**
 
 * **Quicklisp:** A widely used package manager for Common Lisp.
+* **qlot**: for project based environments. It uses quicklisp as well as git, http, and other ways of fetching dependencies.
+* **ocicl**: new project aiming to replace quicklisp, it's also for project based environments.
 * Using Quicklisp to install and manage libraries.
 
 **4. Build Tools:**
@@ -60,7 +62,7 @@ This tutorial will introduce you to some of the most popular and actively mainta
 
 **6. Development Environments:**
 
-* SLIME (Superior Lisp Interaction Mode for Emacs).
+* SLIME (Superior Lisp Interaction Mode for Emacs) (Sly is a fork of SLIME, so whatever applies to SLIME applies to sly as well).
 * Other Lisp IDEs.
 
 This tutorial aims to provide a practical overview of Common Lisp implementations and the ecosystem surrounding them. By the end, you should be able to choose an implementation suitable for your needs, manage libraries, and build Lisp projects effectively.
@@ -297,6 +299,25 @@ Then, in your Lisp environment, load your project:
 This will load your project and all its dependencies.
 
 Quicklisp is an essential tool for any Common Lisp developer. It simplifies library management and makes it easy to use external code in your projects. This section provided a basic introduction to Quicklisp. For more advanced features and options, refer to the Quicklisp documentation. The next section will cover ASDF, the standard build tool for Common Lisp.
+
+### 3.3 Qlot
+
+Qlot is basically a way to manage project specific dependencies and it can fetch those dependencies from a varierty of sources including:
+
+- multiple quicklisp distributions
+- git repositories
+- http(s) files
+- and others
+
+It's extensible to be able to add different types of sources.
+
+The tutorial in the repository is the best source of information. I personally use qlot for managing the code in my small company and it has been very useful.
+
+[https://github.com/fukamachi/qlot](https://github.com/fukamachi/qlot)
+
+### 3.4 OCICL
+
+OCICL is a new alternative to quicklisp, and like qlot, it sets up project specific dependency management. Here's [a link](https://github.com/ocicl/ocicl) to the repository with its tutorial.
 
 ## 4. Build Tools: ASDF
 
@@ -583,7 +604,7 @@ CFFI provides many more features for interacting with C, including defining stru
 
 A good development environment can significantly improve your productivity when working with any programming language. This section introduces SLIME, the most popular development environment for Common Lisp, and briefly mentions other available options.
 
-### 6.1 SLIME (Superior Lisp Interaction Mode for Emacs)
+### 6.1 SLIME (Superior Lisp Interaction Mode for Emacs) (and Sly)
 
 SLIME (Superior Lisp Interaction Mode for Emacs) is an Emacs mode that provides a powerful and interactive development environment for Common Lisp. It's the most widely used and highly regarded Lisp development environment.
 
@@ -635,8 +656,10 @@ While SLIME is the most popular choice, other Lisp IDEs and development tools ar
 
 * **LispWorks IDE:** As mentioned earlier, LispWorks provides its own comprehensive IDE with advanced features. It's a commercial product but offers a very polished and professional development experience.
 * **Portacle:** A portable Common Lisp development environment that includes SBCL, SLIME, and other tools in a single package. It's a good option for beginners as it simplifies the setup process.
-* **Lem:** A Common Lisp editor inspired by Emacs. While not strictly an IDE like SLIME, it offers Lisp-specific features and can be a good alternative for those who prefer a more modern editor experience.
+* **Lem:** A Common Lisp editor inspired by Emacs. While not strictly an IDE like SLIME, it offers Lisp-specific features and can be a good alternative for those who prefer a more modern editor experience. Lem is making quick strides with an incredibly active communty to a point where it seems the aim is to replace emacs altogether. They even have their own version of magit called legit, and they keep coming up with new improvements all the time. With that said, the documentation is not as extensive, and it assumes you know how to use emacs, since most of the key bindinds are similar. I would suggest beginners to use emacs instead.
+* **Visual Studio Code:** has a slynk connector to a slime server. I personally started using this because of the high barrier to entry to lisp. However, once I finally made the jump to emacs, the improvement in the workflow was very big. While programming in CL in visual studio is still better than say python or any other language because of the REPL, it is still really behind using emacs. The emacs integration to the Common Lisp REPL programming workflow is unmatched.
+* **Sublime Text:** also has a REPL package, which can sometimes be better than Visual Studio since the REPL is loaded as a new tab and it makes it much more convenient than Visual Studio (this is my personal experience).
+* **Atom:** even though the editor itself is discontinued, the CL REPL integration is still pretty good and accessible for beginners.
+* **climacs:** this is hopefully going to be the future once it's fully implemented. It integrates with CL in a way no other editor, including emacs, has. However, the actual editor functionality is not ready.
 
-For most users, SLIME is the recommended choice due to its powerful features, wide adoption, and excellent integration with Emacs. However, exploring other options might be worthwhile depending on your preferences and requirements.
-
-This section introduced SLIME and briefly mentioned other Lisp IDEs. Setting up a good development environment is an important first step in learning and using Common Lisp effectively. This concludes the tutorial on Common Lisp Implementations and related concepts. You should now have a good understanding of how to choose an implementation, manage libraries, build projects, and set up a development environment.
+My personal recommendation if you are starting with Common Lisp and don't want to waste time learning emacs is to use either VSCode, Sublime Text, or Atom. This is **not** the standard recommendation. Once you decide to invest in Common Lisp and actually code any medium to large project, my recommendation is to jump ship immediately and invest in learning emacs. Most people will recommend just using emacs right away, which I agree is the right approach once you have commited to Common Lisp, however, I understand the frustration involved in the slowdown of having to learn a very different IDE than all the *modern* ones. I will say though that once you learn emacs, this by itself will be worth it and it may even become your standard editor for a lot of things. Emacs is very powerful and customizable, it's just that the steep learning curve makes it hard to start. I recommend to start using org mode right away to manage your todo lists even if you don't use it to program, that way you slowly get used to using emacs, and after a while of using even very basic org mode functionality, you will realize it's a better editor than basically anything else out there including Visual Studio Code, Sublime Text, Zed, and the rest, so that will then make it obvious to switch to programming with emacs, and will make the transition smoother. It's much easier to just have to learn how to use the Slime/Sly IDE features instead of having to learn text editing features and IDE features at the same time.
