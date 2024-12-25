@@ -23,7 +23,7 @@ Some examples:
 ; this is the first comment
 (defvar spam 1) ; and this is the second comment
           ;; ... and now a third!
-(defvar text "# This is not a comment because it's inside quotes.")
+(defvar text "; This is not a comment because it's inside quotes.")
 ```
 
 As you may have guessed the form `defvar` above defines a variable. We'll delve into this a bit later.
