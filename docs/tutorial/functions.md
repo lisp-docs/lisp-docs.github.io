@@ -4,10 +4,6 @@ sidebar_position: 5
 
 # Functions
 
-:::warning
-This article is a stub. Please help contribute in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below
-:::
-
 ## Introduction to Functions in Common Lisp
 
 Functions are fundamental building blocks in any programming language, and Common Lisp is no exception. They allow you to encapsulate reusable blocks of code, making your programs more modular, organized, and easier to maintain. In Common Lisp, functions are first-class citizens, meaning they can be passed as arguments to other functions, returned as values, and assigned to variables. This flexibility is a key aspect of Lisp's expressive power.
