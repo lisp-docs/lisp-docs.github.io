@@ -780,4 +780,6 @@ Implementing a new object model typically involves:
 
 This is a very complex topic and is beyond the scope of this introductory tutorial. However, it's important to understand that the MOP provides this level of customization.
 
-These examples illustrate some of the advanced capabilities of the MOP. It's a powerful tool that allows you to customize and extend CLOS in significant ways. However, it's important to use it judiciously, as overuse can make code more complex. For most applications, the standard behavior of CLOS is sufficient. This concludes the tutorial.
+These examples illustrate some of the advanced capabilities of the MOP. It's a powerful tool that allows you to customize and extend CLOS in significant ways. However, it's important to use it judiciously, as overuse can make code more complex. For most applications, the standard behavior of CLOS is sufficient.
+
+The standard book on the subject is The Art of the MetaObject Protocol. We have some of the chapters which are allowed to be reprinted in the Technical Reference, however for an in depth explanation of CL MOP, this book is the ultimate reference.
