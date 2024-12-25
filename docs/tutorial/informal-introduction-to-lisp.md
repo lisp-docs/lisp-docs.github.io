@@ -846,15 +846,17 @@ Output (the last comma will remain, a more sophisticated format string could avo
 A more elegant way to avoid the trailing comma is to use `loop for` and `format` with conditional printing:
 
 ```lisp
-(loop for a = 0 then b
-      and b = 1 then (+ a b)
-      while (< a 1000)
-      do (format t "~d~@[,-~]" a)) ; Print a, and a comma unless it's the first one.
+(let ((fib_numbers (loop for a = 0 then b
+                         and b = 1 then (+ a b)
+                         while (< a 1000)
+                         collect a)))
+  (format t "~{~A~^, ~}" fib_numbers)) ; Print each element, and a comma unless it's the last one.
 (terpri)
 ```
 
 Output:
 
 ```lisp
-0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
+NIL
 ```
