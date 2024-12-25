@@ -1008,4 +1008,4 @@ Output:
 "The answer is 42."
 ```
 
-These examples cover the most commonly used `format` directives. `format` is much more powerful than this short introduction shows, but these basics will get you started. For more details, consult the Common Lisp HyperSpec.
+These examples cover the most commonly used `format` directives. `format` is much more powerful than this short introduction shows, but these basics will get you started. For more details, consult the Common Lisp Technical Reference.
