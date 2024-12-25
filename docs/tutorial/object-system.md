@@ -4,6 +4,11 @@ sidebar_position: 6
 
 # Object System
 
+:::warning
+This article **needs to be checked!**.
+Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
+:::
+
 ## Introduction to CLOS (Common Lisp Object System)
 
 The Common Lisp Object System (CLOS) is a powerful and flexible object-oriented programming system built into Common Lisp. Unlike some object systems that were added as an afterthought, CLOS is an integral part of the language, deeply integrated with its other features. CLOS is based on the *generic function* paradigm, which is different from the more common message-passing paradigm found in languages like Java or C++. This difference leads to a more flexible and expressive way of defining object behavior.
