@@ -478,15 +478,15 @@ Output:
 Common Lisp strings *are* mutable. You can change individual characters using `(setf (aref string index) new-character)`:
 
 ```lisp
-(setf word "Python")
-(setf (aref word 0) #\J)
+(setf word "List")
+(setf (aref word 3) #\p)
 word
 ```
 
 Output:
 
 ```lisp
-"Jython"
+"Lisp"
 ```
 
 The function `length` returns the length of a string:
