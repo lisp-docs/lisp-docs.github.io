@@ -225,7 +225,7 @@ Output:
 113.06
 ```
 
-Like Python, you should treat `*` as read-only. Avoid assigning to it explicitly.
+You should treat `*` as read-only. Avoid assigning to it explicitly.
 
 Common Lisp supports other numeric types, including complex numbers. The imaginary unit is represented as `#C(0 1)` or `0+1i`
 
@@ -350,13 +350,13 @@ Second line.
 
 Common Lisp doesn't have "raw strings" in the same way as Python. Backslashes are always interpreted as escape characters unless they are themselves escaped (e.g., `\\`).
 
-String literals can span multiple lines using backslashes at the end of each line to continue the string:
+String literals can span multiple lines without the need for any special syntax:
 
 ```lisp
-(setf long-string "Usage: thingy [OPTIONS]\
-\
-     -h                        Display this usage message\
-\
+(setf long-string "Usage: thingy [OPTIONS]
+
+     -h                        Display this usage message
+
      -H hostname               Hostname to connect to")
 (print long-string)
 ```
@@ -386,47 +386,47 @@ Output:
 There is no automatic concatenation of adjacent string literals in Common Lisp. You must always use `concatenate`.
 
 ```lisp
-(concatenate 'string "Py" "thon")
+(concatenate 'string "Li" "sp")
 ```
 
 Output:
 
 ```lisp
-"Python"
+"Lisp"
 ```
 
 ```lisp
-(setf prefix "Py")
-(concatenate 'string prefix "thon")
+(setf prefix "Li")
+(concatenate 'string prefix "sp")
 ```
 
 Output:
 
 ```lisp
-"Python"
+"Lisp"
 ```
 
 Strings can be accessed by index using `aref`. The first character has index 0:
 
 ```lisp
-(setf word "Python")
+(setf word "Lisp")
 (aref word 0) ; character in position 0
 ```
 
 Output:
 
 ```lisp
-#\P
+#\L
 ```
 
 ```lisp
-(aref word 5) ; character in position 5
+(aref word 2) ; character in position 5
 ```
 
 Output:
 
 ```lisp
-#\n
+#\s
 ```
 
 Indices can't be negative in Common Lisp's `aref`.
@@ -440,17 +440,17 @@ To get a substring (slicing), use `subseq`:
 Output:
 
 ```lisp
-"Py"
+"Li"
 ```
 
 ```lisp
-(subseq word 2 5) ; characters from position 2 (included) to 5 (excluded)
+(subseq word 2 3) ; characters from position 2 (included) to 3 (excluded)
 ```
 
 Output:
 
 ```lisp
-"tho"
+"s"
 ```
 
 Slice indices have useful defaults; an omitted first index defaults to zero, and an omitted second index defaults to the length of the string:
@@ -462,17 +462,17 @@ Slice indices have useful defaults; an omitted first index defaults to zero, and
 Output:
 
 ```lisp
-"Python"
+"Lisp"
 ```
 
 ```lisp
-(subseq word 4)   ; characters from position 4 (included) to the end
+(subseq word 2)   ; characters from position 4 (included) to the end
 ```
 
 Output:
 
 ```lisp
-"on"
+"sp"
 ```
 
 Common Lisp strings *are* mutable. You can change individual characters using `(setf (aref string index) new-character)`:
