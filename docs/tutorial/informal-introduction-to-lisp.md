@@ -860,3 +860,152 @@ Output:
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
 NIL
 ```
+
+The `format` form is very powerful and it deserves a separate tutorial on it's own; however, here's a short intro to get you started:
+
+## 1.5. The `format` directive
+
+Let's explore the basics of the Common Lisp `format` directive. `format` is a powerful tool for creating formatted output. It takes a destination (usually `t` for standard output, or `nil` to return a string), a format string, and any arguments to be formatted.
+
+### 1. Basic String Output
+
+The simplest use is just printing a string:
+
+```lisp
+(format t "Hello, world!")
+```
+
+Output:
+
+```lisp
+Hello, world!
+```
+
+### 2. Inserting Values
+
+The `~a` directive inserts an argument using `princ` (human-readable representation):
+
+```lisp
+(let ((name "Alice"))
+  (format t "Hello, ~a!" name))
+```
+
+Output:
+
+```lisp
+Hello, Alice!
+```
+
+### 3. Newlines
+
+`~%` inserts a newline character:
+
+```lisp
+(format t "First line.~%Second line.")
+```
+
+Output:
+
+```lisp
+First line.
+Second line.
+```
+
+### 4. Formatting Integers
+
+`~d` formats an integer in decimal:
+
+```lisp
+(format t "The number is ~d." 42)
+```
+
+Output:
+
+```lisp
+The number is 42.
+```
+
+`~x` formats an integer in hexadecimal:
+
+```lisp
+(format t "The hexadecimal value is ~x." 255)
+```
+
+Output:
+
+```lisp
+The hexadecimal value is ff.
+```
+
+### 5. Formatting Floating-Point Numbers
+
+`~f` formats a floating-point number:
+
+```lisp
+(format t "The value is ~f." 3.14159)
+```
+
+Output:
+
+```lisp
+The value is 3.14159.
+```
+
+You can control the number of decimal places:
+
+```lisp
+(format t "The value is ~,2f." 3.14159) ; 2 decimal places
+```
+
+Output:
+
+```lisp
+The value is 3.14
+```
+
+### 6. Conditional Text
+
+`~[...~;...~]` allows for conditional output. The first clause is used if the argument is `nil`, the second if it is not:
+
+```lisp
+(format t "The value is ~[nil~;not nil~]." nil)
+(format t "The value is ~[nil~;not nil~]." 1)
+```
+
+Output:
+
+```lisp
+The value is nil.
+The value is not nil.
+```
+
+### 7. Iterating over Lists (and avoiding trailing separators)
+
+`~{...~}` iterates over a list. Combined with `~^`, you can avoid trailing separators:
+
+```lisp
+(format t "The numbers are: ~{~a~^, ~}." '(1 2 3 4))
+```
+
+Output:
+
+```lisp
+The numbers are: 1, 2, 3, 4.
+```
+
+### 8. Returning a String
+
+To get the formatted output as a string instead of printing it, use `nil` as the first argument:
+
+```lisp
+(let ((formatted-string (format nil "The answer is ~d." 42)))
+  (print formatted-string))
+```
+
+Output:
+
+```lisp
+"The answer is 42."
+```
+
+These examples cover the most commonly used `format` directives. `format` is much more powerful than this short introduction shows, but these basics will get you started. For more details, consult the Common Lisp HyperSpec.
