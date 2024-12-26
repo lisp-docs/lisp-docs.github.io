@@ -1,0 +1,9 @@
+{
+    "label": "More Resources",
+    "position": 14,
+    "link": {
+      "type": "generated-index",
+      "description": "Additional resources on learning Common Lisp."
+    }
+  }
+  

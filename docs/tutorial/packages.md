@@ -9,6 +9,32 @@ This article **needs to be checked!**.
 Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
 :::
 
+## Quickstart
+
+If you are looking to just hit the ground running and learn Common Lisp I recommend just [installing SBCL](https://www.sbcl.org/getting.html) and [going ahead](/docs/tutorial/informal-introduction-to-lisp) with the tutorial.
+
+If you are on a linux/debian type system, you can run
+
+```bash
+$ sudo apt-get install sbcl
+```
+
+For macOS
+
+```bash
+$ brew install sbcl
+```
+
+For Arch Linux
+
+```bash
+$ sudo pacman -S sbcl
+```
+
+For other systems, Windows, or to just get the latest version instead of the one in your package manager, you can [download a binary here](https://www.sbcl.org/platform-table.html) (click on the green cell in the table corresponding to your system, they are actually links). Then follow these instructions: [SBCL's Getting Started](https://www.sbcl.org/getting.html).
+
+For a more detailed explanation, read ahead.
+
 ## Introduction to Packages, Protocols, and Code in Different Files in Common Lisp
 
 As Lisp programs grow in size and complexity, it becomes essential to organize code into manageable units. Common Lisp provides *packages* as a mechanism for namespace management, preventing name clashes and promoting modularity. Furthermore, the concept of *protocols* (often implemented using generic functions and CLOS) allows for defining interfaces and structuring interactions between different parts of a system. Finally, organizing code into separate files is crucial for maintainability and collaboration.
@@ -528,7 +554,8 @@ ASDF (Another System Definition Facility) is the standard build system for Commo
 
 ### 5.1 ASDF Basics (Recap Focusing on Multi-File Aspects)
 
-As a quick recap, ASDF uses system definition files (`.asd` files) to describe the structure of a project. A system is a collection of files (Lisp source code, data files, etc.) that make up a logical unit of software.
+As a quick recap (since this was discussed [here](/docs/tutorial/using-cl-implementation#4-build-tools-asdf)), ASDF uses system definition files (`.asd` files) to describe the structure of a project. A system is a collection of files (Lisp source code, data files, etc.) that make up a logical unit of software.
+
 
 A basic system definition looks like this:
 
