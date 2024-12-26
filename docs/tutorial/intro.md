@@ -7,20 +7,22 @@ slug: /tutorial
 
 The goal of the tutorial is to provide an example driven explanation of the language to hit the ground running quickly. The [Technical Reference](https://lisp-docs.github.io/cl-language-reference/) should be reviewed for a more definite and technically correct explanation of any concept, symbol, operator, or facet of the language. Additionally we have a list of recommended books for both [beginner programmers](/docs/tutorial/for_beginners/) and [experienced programmers](/docs/tutorial/for_programmers/).
 
-So far the only sections of the tutorial written are those on:
+<!-- So far the only sections of the tutorial written are those on:
 
 - [Recommended Books for Begineers](/docs/tutorial/for_beginners/)
 - [Recommended Reading for Experienced Programmers](/docs/tutorial/for_programmers/)
 - [Macros](/docs/tutorial/macros)
 - [Long Tutorial on Packages](/docs/tutorial/projects/guide_to_packages)
 - [Short Guide to Packages](/docs/tutorial/projects/packages-systems)
-- [Tutorial on Structuring Projects](/docs/tutorial/projects/)
+- [Tutorial on Structuring Projects](/docs/tutorial/projects/) -->
+
+Most of the tutorial is written. However, it needs to be checked for correctness. With that said, most of it is correct and should get you to be ready to go and dig deeper in other resources.
 
 Please help us write this tutorial! You can even contribute content from the Public Domain or with Copyright permissions.
 
-:::warning
+<!-- :::warning
 This article is a stub. Please help contribute in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below
-:::
+::: -->
 
 
 <!-- Need to populate this. Probably similarly to https://docs.python.org/3/tutorial/index.html but for CL... -->
