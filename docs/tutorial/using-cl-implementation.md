@@ -4,10 +4,31 @@ sidebar_position: 3
 
 # Common Lisp Implementations
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
+## Quickstart
+
+If you are looking to just hit the ground running and learn Common Lisp I recommend just [installing SBCL](https://www.sbcl.org/getting.html) and [going ahead](/docs/tutorial/informal-introduction-to-lisp) with the tutorial.
+
+If you are on a linux/debian type system, you can run
+
+```bash
+sudo apt-get install sbcl
+```
+
+For macOS
+
+```bash
+brew install sbcl
+```
+
+For Arch Linux
+
+```bash
+sudo pacman -S sbcl
+```
+
+For other systems, Windows, or to just get the latest version instead of the one in your package manager, you can [download a binary here](https://www.sbcl.org/platform-table.html) (click on the green cell in the table corresponding to your system, they are actually links). Then follow these instructions: [SBCL's Getting Started](https://www.sbcl.org/getting.html).
+
+For a more detailed explanation, read ahead.
 
 ## Introduction to Common Lisp Implementations
 
@@ -304,10 +325,10 @@ Quicklisp is an essential tool for any Common Lisp developer. It simplifies libr
 
 Qlot is basically a way to manage project specific dependencies and it can fetch those dependencies from a varierty of sources including:
 
-- multiple quicklisp distributions
-- git repositories
-- http(s) files
-- and others
+* multiple quicklisp distributions
+* git repositories
+* http(s) files
+* and others
 
 It's extensible to be able to add different types of sources.
 
