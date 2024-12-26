@@ -558,4 +558,4 @@ There are different options to choose. Please check the [Awesome-CL](https://git
 * mgl-pax - Exploratory programming environment and documentation generator. one may accomplish similar effects as with Literate Programming, but documentation is generated from code, not vice versa. Code is first, code must look pretty, documentation is code. MIT.
 * sphinxcontrib-cldomain - Extending Sphinx to cover Common Lisp. To build documentation with the same ease as sphinx would a Python project. GPL3 crossreferences, links to the CLHS, symbol index, search, and all Sphinx features.
 * Codex - A beautiful documentation system for Common Lisp. MIT.
-* See also the [Literate Programming](https://github.com/CodyReichert/awesome-cl?tab=readme-ov-file#literate-programming) sectio n in the [Awesome-CL](https://github.com/CodyReichert/awesome-cl) page.
+* See also the [Literate Programming](https://github.com/CodyReichert/awesome-cl?tab=readme-ov-file#literate-programming) section in the [Awesome-CL](https://github.com/CodyReichert/awesome-cl) page.
