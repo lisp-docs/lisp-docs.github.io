@@ -28,7 +28,7 @@ sudo pacman -S sbcl
 
 For other systems, Windows, or to just get the latest version instead of the one in your package manager, you can [download a binary here](https://www.sbcl.org/platform-table.html) (click on the green cell in the table corresponding to your system, they are actually links). Then follow these instructions: [SBCL's Getting Started](https://www.sbcl.org/getting.html).
 
-For a more detailed explanation, read ahead.
+I recommend now to [continue](/docs/tutorial/informal-introduction-to-lisp) with the tutorial. Otherwise, for a more detailed explanation, read ahead.
 
 ## Introduction to Common Lisp Implementations
 
