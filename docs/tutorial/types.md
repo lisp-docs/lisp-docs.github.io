@@ -4,11 +4,6 @@ sidebar_position: 7
 
 # Types
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
-
 ## Introduction to the Common Lisp Type System
 
 Common Lisp possesses a rich and powerful type system that goes far beyond simple static typing found in languages like C or Java. It's a *dynamic* type system, meaning type checking primarily occurs at runtime. However, it also includes features for type declarations that can be used for optimization and static analysis. It is also a *hierarchy* of types, where types can be subtypes and supertypes of each other. The Common Lisp Object System (CLOS) is integrated into the type system, making classes themselves types.

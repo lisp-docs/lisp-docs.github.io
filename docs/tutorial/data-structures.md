@@ -4,11 +4,6 @@ sidebar_position: 5
 
 # Data Structures
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
-
 ## Introduction to Data Structures in Common Lisp
 
 Data structures are fundamental to programming, providing ways to organize and store data efficiently. Common Lisp offers a rich set of built-in data structures, each with its own strengths and weaknesses, suitable for different tasks. This tutorial will guide you through the most important data structures in Common Lisp and the forms used to manipulate them.

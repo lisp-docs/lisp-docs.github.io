@@ -4,11 +4,6 @@ sidebar_position: 9
 
 # Macros
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
-
 ## Introduction to Macros in Common Lisp
 
 Macros are a powerful metaprogramming feature in Common Lisp that allow you to extend the language itself. Unlike functions, which operate on evaluated arguments at runtime, macros operate on the *unevaluated* code (the abstract syntax tree or AST) at compile time. This allows you to perform code transformations, create new syntactic forms, and implement domain-specific languages within Lisp.

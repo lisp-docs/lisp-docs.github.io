@@ -4,11 +4,6 @@ sidebar_position: 8
 
 # Condition System
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
-
 ## Introduction to the Condition System and Error Handling in Common Lisp
 
 The Common Lisp Condition System is a powerful and flexible mechanism for handling exceptional situations, including errors, warnings, and other events that may disrupt the normal flow of program execution. Unlike simpler error handling mechanisms like exceptions in other languages, the Condition System allows for more sophisticated control over how these situations are handled, including the possibility of *recovering* from errors and continuing execution.

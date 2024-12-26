@@ -4,11 +4,6 @@ sidebar_position: 8
 
 # Packages
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
-
 ## Introduction to Packages, Protocols, and Code in Different Files in Common Lisp
 
 As Lisp programs grow in size and complexity, it becomes essential to organize code into manageable units. Common Lisp provides *packages* as a mechanism for namespace management, preventing name clashes and promoting modularity. Furthermore, the concept of *protocols* (often implemented using generic functions and CLOS) allows for defining interfaces and structuring interactions between different parts of a system. Finally, organizing code into separate files is crucial for maintainability and collaboration.

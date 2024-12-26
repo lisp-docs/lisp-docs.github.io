@@ -4,11 +4,6 @@ sidebar_position: 7
 
 # Input and Output
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
-
 ## Introduction to Input and Output in Common Lisp
 
 Input and Output (I/O) are essential aspects of any programming language, allowing programs to interact with the external world, such as reading data from files, displaying information to the user, and communicating with other programs. Common Lisp provides a powerful and flexible I/O system that handles various types of input and output, from simple text streams to binary data and complex data structures.
