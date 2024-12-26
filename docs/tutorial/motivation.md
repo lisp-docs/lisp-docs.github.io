@@ -21,3 +21,7 @@ In a world dominated by mainstream programming languages, you might ask, "Why sh
 * **Practical Applications:** Common Lisp is used in production in all sorts of fields. While it is true, that large libraries for some repetitive work are not as common as in some other languages, the speed to develop a custom solution can usually dwarf the need for those libraries to begin with. For any standard functionality, there are usually multiple Common Lisp libraries, and the community is usually very responsive in accepting changes and contributions.
 
 If you're looking for a language that will challenge you, expand your programming horizons, and provide you with powerful tools for solving complex problems, then Common Lisp is worth exploring. Dive in and discover the power and elegance of Lisp!
+
+## Additional Resources
+
+See the [Why Lisp?](https://lisp-docs.github.io/docs/whylisp) section of our website which has a few collected articles from around the web.
