@@ -4,10 +4,7 @@ sidebar_position: 3.1
 
 # An Informal Introduction to Common Lisp
 
-:::warning
-This article **needs to be checked!**.
-Please help contribute by checking it and making changes in [our repository](https://github.com/lisp-docs/lisp-docs.github.io) or by clicking on the "Edit this page" link below.
-:::
+This informal introduction is meant to be an example drive first introduction to interacting with a Common Lisp Read-Eval-Print-Loop (REPL). Please start a REPL in your terminal or IDE of choice and follow along. If you installed SBCL in the last tutorial, simply run `$ sbcl` in your terminal to start a REPL.
 
 In the following examples, input and output are distinguished by the presence or absence of prompts.  To repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the Lisp system.  In Common Lisp, the standard interactive prompt is often `>` (though this can vary between implementations). We will use `>` here.
 
