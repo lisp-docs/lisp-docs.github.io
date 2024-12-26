@@ -4,7 +4,7 @@ sidebar_position: 3.1
 
 # An Informal Introduction to Common Lisp
 
-This informal introduction is meant to be an example drive first introduction to interacting with a Common Lisp Read-Eval-Print-Loop (REPL). Please start a REPL in your terminal or IDE of choice and follow along. If you installed SBCL in the last tutorial, simply run `$ sbcl` in your terminal to start a REPL.
+This informal introduction is meant to be an example driven first introduction to interacting with a Common Lisp Read-Eval-Print-Loop (REPL). Please start a REPL in your terminal or IDE of choice and follow along. If you installed SBCL in the last tutorial, simply run `$ sbcl` in your terminal to start a REPL.
 
 In the following examples, input and output are distinguished by the presence or absence of prompts.  To repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the Lisp system.  In Common Lisp, the standard interactive prompt is often `>` (though this can vary between implementations). We will use `>` here.
 
@@ -276,19 +276,21 @@ Output:
 "1975"
 ```
 
+Single quotes `'` are not string delimiters.
+
+```lisp
+"doesn't"
+```
+
+Output:
+
+```lisp
+"doesn't"
+```
+
 To include a double quote within a string, you need to escape it using a backslash `\`:
 
 ```lisp
-"doesn't"
-```
-
-Output:
-
-```lisp
-"doesn't"
-```
-
-```lisp
 "\"Yes,\" they said."
 ```
 
@@ -296,53 +298,17 @@ Output:
 
 ```lisp
 "\"Yes,\" they said."
-```
-
-```lisp
-"\"Isn't,\" they said."
-```
-
-Output:
-
-```lisp
-"\"Isn't,\" they said."
 ```
 
 In the Lisp REPL, the string definition and output string are the same. The `print` function produces a more readable output, but for strings, it doesn't remove the quotes unless you use `princ`.
 
-```lisp
-(setf s "First line.\nSecond line.") ; \n means newline
-
-s ; without print, special characters are included in the string
-```
-
-Output:
+Special characters like `\n` in other languages are not interpreted as special characters in Lisp. (unless you use the interop library for this). The `format` directive has its own special characters, which will be discussed later on in this tutorial. For now, note that `~%` is the directive for a new line. The `t` in the example below means to print to the standrd output.
 
 ```lisp
-"First line.\nSecond line."
-```
-
-```lisp
-(print s) ; with print, special characters are interpreted, so \n produces new line, and quotes are printed
-```
-
-Output:
-
-```lisp
-"First line.
-Second line."
-
-```lisp
-
-```lisp
-(princ s) ; with princ, special characters are interpreted, so \n produces new line, and quotes are not printed
-```
-
-Output:
-
-```lisp
+CL-USER> (format t "First line.~%Second line.")
 First line.
 Second line.
+NIL
 ```
 
 Common Lisp doesn't have "raw strings" in the same way as Python. Backslashes are always interpreted as escape characters unless they are themselves escaped (e.g., `\\`).
@@ -531,7 +497,14 @@ Output:
 1
 ```
 
-Common Lisp does *not* support negative indexing with `elt`. To access elements from the end, use `nth` with a calculated index or `nthcdr`:
+In addition `nth` can be used to access the nth item in a 0-indexed list.
+
+```lisp
+CL-USER> (nth 2 (list 1 2 3 4))
+3 (2 bits, #x3, #o3, #b11)
+```
+
+Common Lisp does *not* support negative indexing with `nth` or `elt`. To access elements from the end, use a calculated index:
 
 ```lisp
 (nth (- (length squares) 1) squares) ; last element (equivalent to squares[-1] in Python)
