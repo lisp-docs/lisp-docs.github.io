@@ -978,4 +978,4 @@ Output:
 "The answer is 42."
 ```
 
-These examples cover the most commonly used `format` directives. `format` is much more powerful than this short introduction shows, but these basics will get you started. For more details, consult the Common Lisp Technical Reference.
+These examples cover the most commonly used `format` directives. `format` is much more powerful than this short introduction shows, but these basics will get you started. For more details, consult the Common Lisp Technical Reference's [Section on Formatted Output (22.3)](https://lisp-docs.github.io/cl-language-reference/chap-22/cc-d-formatted-output).
