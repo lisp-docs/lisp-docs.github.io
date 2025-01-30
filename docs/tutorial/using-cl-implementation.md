@@ -36,7 +36,7 @@ Common Lisp is defined by a standard, but it's the *implementations* that bring 
 
 This tutorial will introduce you to some of the most popular and actively maintained Common Lisp implementations, discuss their strengths and weaknesses, and cover associated concepts like package managers and build tools.
 
-**Key Concepts:**
+### Key Concepts
 
 * **Implementation:** A concrete realization of the Common Lisp standard.
 * **Compiler/Interpreter:** The component that translates Lisp code into executable instructions.
@@ -45,46 +45,35 @@ This tutorial will introduce you to some of the most popular and actively mainta
 * **Package Managers:** Tools for managing Lisp libraries and dependencies.
 * **Build Tools:** Tools for building and distributing Lisp applications.
 
-**Table of Contents:**
+### Links to Implementations
 
-**1. Popular Common Lisp Implementations:**
+There are quite  a a few implementations. We are only going to cover some in this document. Here is a list of links to implementation websites where you can read their documentation or download them.
 
-* **SBCL (Steel Bank Common Lisp):** A high-performance, open-source compiler.
-* **CCL (Clozure Common Lisp):** A fast, native compiler with good support for macOS and other platforms.
-* **ECL (Embeddable Common Lisp):** A lightweight implementation suitable for embedding in other applications.
-* **ABCL (Armed Bear Common Lisp):** A Java-based implementation that runs on the Java Virtual Machine (JVM).
-* **LispWorks:** A commercial implementation with a comprehensive IDE and advanced features.
+#### Open Source Implementations
 
-**2. Choosing an Implementation:**
+* [**SBCL**](https://www.sbcl.org/)
+* [**CMUCL**](https://www.cons.org/cmucl/)
+  * Since SBCL is a fork of CMUCL which became very popular, people tend to forget about CMUCL. Note that this implementation is actively developed, and as of today 2025/01/30 the last commit in [their repository](https://gitlab.common-lisp.net/cmucl/cmucl) was about 12 hours ago
+* [**Clozure Common Lisp**](https://ccl.clozure.com/)
+* [**Embeddable Common-Lisp**](https://ecl.common-lisp.dev/)
+  * Very usful for writting embedded applications and interacting with C
+* [**CLISP**](https://www.gnu.org/software/clisp/)
+* [**ABCL**](https://abcl.org/): This implementation runs on the Java Virtual Machine (JVM)
+* [**CLAS**](https://clasp-developers.github.io/)
+  * Seamless Integration of Common Lisp and C++
 
-* Performance considerations.
-* Platform compatibility.
-* Available libraries and tools.
-* Licensing and support.
+### Commercial Implementations
 
-**3. Package Managers:**
+* [**LispWorks**](https://www.lispworks.com/)
+* [**Allegro Common Lisp**](https://franz.com/products/allegro-common-lisp/)
 
-* **Quicklisp:** A widely used package manager for Common Lisp.
-* **qlot**: for project based environments. It uses quicklisp as well as git, http, and other ways of fetching dependencies.
-* **ocicl**: new project aiming to replace quicklisp, it's also for project based environments.
-* Using Quicklisp to install and manage libraries.
+### Experimental / New Implementations Still In Development
 
-**4. Build Tools:**
-
-* **ASDF (Another System Definition Facility):** A standard build system for Common Lisp.
-* Defining systems and dependencies with ASDF.
-* Building and loading Lisp projects.
-
-**5. Foreign Function Interface (FFI):**
-
-* Interacting with C code using CFFI.
-* Calling C functions from Lisp.
-* Using Lisp data structures in C.
-
-**6. Development Environments:**
-
-* SLIME (Superior Lisp Interaction Mode for Emacs) (Sly is a fork of SLIME, so whatever applies to SLIME applies to sly as well).
-* Other Lisp IDEs.
+* [**JSCL**](https://github.com/jscl-project/jscl)
+  * A CL to JS compiler
+* [**valtan**](https://github.com/cxxxr/valtan)
+  * Another CL to JS compiler starting out
+* [**WISP**](https://github.com/mbrock/wisp)
 
 This tutorial aims to provide a practical overview of Common Lisp implementations and the ecosystem surrounding them. By the end, you should be able to choose an implementation suitable for your needs, manage libraries, and build Lisp projects effectively.
 
