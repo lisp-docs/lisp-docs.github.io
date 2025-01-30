@@ -71,6 +71,8 @@ There are quite  a a few implementations. We are only going to cover some in thi
 
 * [**JSCL**](https://github.com/jscl-project/jscl)
   * A CL to JS compiler
+* [**WECL**](https://turtleware.eu/static/paste/wecl-test-gl/main.html)
+  * A CL to Web Assembly (WASM) compiler
 * [**valtan**](https://github.com/cxxxr/valtan)
   * Another CL to JS compiler starting out
 * [**WISP**](https://github.com/mbrock/wisp)
