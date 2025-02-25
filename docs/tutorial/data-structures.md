@@ -90,12 +90,19 @@ This is often represented visually as a box with two compartments:
 ```
 
 Try it yourself (Clarifying quiz):
-What is the cons cell created when we use the following code block?
+-What is the cons cell created when we use the following code block?
+
+```lisp
 (cons '(a b) '(c d))
+```
+
 Answer: ((a b) c d)
 Reason:
+
+```lisp
 car((a b) c d) --> (a b)
 cdr((a b) c d) --> (c d)
+```
 
 ### 1.2 `car` and `cdr`: Accessing Parts of a Cons Cell
 
