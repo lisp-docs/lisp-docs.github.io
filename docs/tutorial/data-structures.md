@@ -63,8 +63,6 @@ Data structures are fundamental to programming, providing ways to organize and s
 
 This tutorial will provide clear explanations and examples for each data structure, helping you understand their usage and choose the appropriate structure for your specific programming needs. We will also cover common operations and functions for manipulating these structures.
 
-You've requested the same section again. I will provide it, but this time I'll include a few more examples and explanations of some of the "and others" list functions mentioned previously, to make it even more complete.
-
 ## 1. Conses and Lists in Common Lisp
 
 Lists are a fundamental data structure in Common Lisp. They are built from *cons cells*, which are pairs of values. Understanding conses is crucial for understanding how lists work.
