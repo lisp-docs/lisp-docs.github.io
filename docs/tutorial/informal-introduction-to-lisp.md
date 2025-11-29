@@ -153,7 +153,9 @@ Output:
 The special operator `setf` is used to assign a value to a variable:
 
 ```lisp
+(defvar width nil)
 (setf width 20)
+(defvar height nil)
 (setf height (* 5 9))
 (* width height)
 ```
@@ -191,7 +193,9 @@ Output:
 In the REPL, the value of the last evaluated expression is available through the special variable `*`. This is similar to `_` in Python's interactive mode.
 
 ```lisp
+(defvar tax nil)
 (setf tax (/ 12.5 100))
+(defvar price nil)
 (setf price 100.50)
 (* price tax)
 ```
@@ -316,6 +320,7 @@ Common Lisp doesn't have "raw strings" in the same way as Python. Backslashes ar
 String literals can span multiple lines without the need for any special syntax:
 
 ```lisp
+(defvar long-string nil)
 (setf long-string "Usage: thingy [OPTIONS]
 
      -h                        Display this usage message
@@ -359,6 +364,7 @@ Output:
 ```
 
 ```lisp
+(defvar prefix nil)
 (setf prefix "Li")
 (concatenate 'string prefix "sp")
 ```
@@ -372,6 +378,7 @@ Output:
 Strings can be accessed by index using `aref`. The first character has index 0:
 
 ```lisp
+(defvar word nil)
 (setf word "Lisp")
 (aref word 0) ; character in position 0
 ```
@@ -455,7 +462,7 @@ Output:
 The function `length` returns the length of a string:
 
 ```lisp
-(setf s "supercalifragilisticexpialidocious")
+(defvar s "supercalifragilisticexpialidocious")
 (length s)
 ```
 
@@ -470,7 +477,7 @@ Output:
 Common Lisp uses *lists* as its primary compound data type to group together other values. Lists are written as a sequence of space-separated values (items) enclosed in parentheses. Lists can contain items of different types.
 
 ```lisp
-(setf squares (list 1 4 9 16 25))
+(defvar squares (list 1 4 9 16 25))
 ```
 
 Evaluating `squares` in the REPL:
@@ -555,7 +562,7 @@ Output:
 Lists in Common Lisp are mutable. You can change their content using `setf` with `elt`:
 
 ```lisp
-(setf cubes (list 1 8 27 65 125)) ; something's wrong here
+(defvar cubes (list 1 8 27 65 125)) ; something's wrong here
 
 (expt 4 3) ; the cube of 4 is 64, not 65!
 ```
@@ -596,7 +603,7 @@ Output:
 Simple assignment in Common Lisp, like in Python, does *not* copy data. When you assign a list to a variable, the variable refers to the existing list:
 
 ```lisp
-(setf rgb (list "Red" "Green" "Blue"))
+(defvar rgb (list "Red" "Green" "Blue"))
 (setf rgba rgb)
 
 (eq rgb rgba) ; they reference the same object (similar to id() in Python)
@@ -623,7 +630,7 @@ Output:
 To create a copy of a list, use `copy-list`:
 
 ```lisp
-(setf correct-rgba (copy-list rgba))
+(defvar correct-rgba (copy-list rgba))
 (setf (elt correct-rgba (- (length correct-rgba) 1)) "Alpha")
 
 correct-rgba
@@ -648,7 +655,7 @@ Output:
 Assignment to slices (using `setf` with `subseq`) is also possible:
 
 ```lisp
-(setf letters (list 'a 'b 'c 'd 'e 'f 'g))
+(defvar letters (list 'a 'b 'c 'd 'e 'f 'g))
 
 letters
 ```
