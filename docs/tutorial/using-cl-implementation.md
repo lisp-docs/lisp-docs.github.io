@@ -613,7 +613,7 @@ Key features of SLIME:
 3. **Install SLIME via Quicklisp:** Within your Lisp REPL, evaluate:
 
     ```lisp
-    (ql:quickload "slime")
+    (ql:quickload "quicklisp-slime-helper")
     ```
 
 4. **Configure Emacs:** Add the following lines to your Emacs initialization file (e.g., `~/.emacs` or `~/.emacs.d/init.el`):
