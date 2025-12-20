@@ -222,33 +222,10 @@ Quicklisp works by maintaining a central repository of library metadata (informa
 
 Here's how to get started with Quicklisp and use it to manage libraries:
 
-**1. Installation:**
+Note: Nowdays Quicklisp comes preinstalled in most implementations.
+You can also visit the (official website)[https://quicklisp.org] if your implementation doesn't support it.
 
-The easiest way to install Quicklisp is to load it directly from its website. Start your Lisp REPL and evaluate the following form:
-
-```lisp
-(ql:quickload "quicklisp")
-```
-
-This will download and install Quicklisp. After the installation is complete, you'll need to load it again, and set it up locally:
-
-```lisp
-(load (merge-pathnames "setup.lisp" (user-homedir-pathname)))
-```
-
-This creates a local Quicklisp installation in your home directory (usually `~/.quicklisp/`).
-
-**2. Loading Quicklisp in your Lisp environment:**
-
-After the initial installation, you can load Quicklisp in your Lisp environment by evaluating:
-
-```lisp
-(ql:quickload "quicklisp")
-```
-
-You can add this form to your Lisp initialization file (e.g., `~/.sbclrc` for SBCL) so that Quicklisp is loaded automatically when you start your Lisp environment.
-
-**3. Installing Libraries:**
+**1. Installing Libraries:**
 
 To install a library using Quicklisp, use the `ql:quickload` function:
 
@@ -258,16 +235,16 @@ To install a library using Quicklisp, use the `ql:quickload` function:
 
 Quicklisp will download and install the specified library and any dependencies it requires. Once a library is quickloaded it is available in the current lisp session.
 
-**4. Using Installed Libraries:**
+**2. Using Installed Libraries:**
 
-Once a library is installed, you can use it in your code using `require` or `ql:quickload`. `require` is the traditional way to load a library, however it only works if the library is already loaded in the lisp environment. `ql:quickload` will load the library if it is not already loaded, therefore it is more convenient.
+Once a library is installed, you can use it in your code using `ql:quickload` or by specifying it in your asdf dependencies (more on this later). 
 
 ```lisp
 (ql:quickload "drakma")
 (drakma:http-request "http://www.google.com")
 ```
 
-**5. Updating Quicklisp and Libraries:**
+**3. Updating Quicklisp and Libraries:**
 
 To update Quicklisp itself, use the `ql:update-dist` function:
 
@@ -281,7 +258,7 @@ To update all installed libraries, use the `ql:update-all-dists` function:
 (ql:update-all-dists)
 ```
 
-**6. Local Projects:**
+**4. Local Projects:**
 
 Quicklisp also supports managing dependencies for individual projects. You can create a local projects directory and use a local-projects file to manage dependencies for each project independently.
 
