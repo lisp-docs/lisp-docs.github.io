@@ -59,7 +59,7 @@ This tutorial will introduce you to the fundamental concepts of readtables, incl
 
 * `*read-base*`: The input base for numbers.
 * `*read-default-float-format*`: The default float format.
-* `*readtable-case*`: Controlling case conversion during reading.
+* `readtable-case`: Controlling case conversion during reading.
 * `with-standard-io-syntax`: Restoring standard readtable settings.
 
 **6. Examples and Advanced Techniques:**
