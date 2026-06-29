@@ -306,7 +306,7 @@ Output:
 
 In the Lisp REPL, the string definition and output string are the same. The `print` function produces a more readable output, but for strings, it doesn't remove the quotes unless you use `princ`.
 
-Special characters like `\n` in other languages are not interpreted as special characters in Lisp. (unless you use the interop library for this). The `format` directive has its own special characters, which will be discussed later on in this tutorial. For now, note that `~%` is the directive for a new line. The `t` in the example below means to print to the standrd output.
+Special characters like `\n` in other languages are not interpreted as special characters in Lisp. (unless you use the interop library for this). The `format` directive has its own special characters, which will be discussed later on in this tutorial. For now, note that `~%` is the directive for a new line. The `t` in the example below means to print to the standard output.
 
 ```lisp
 CL-USER> (format t "First line.~%Second line.")
